@@ -170,6 +170,19 @@ body {
     color: var(--accent-primary);
 }
 
+.nav-links a.btn-nav {
+    background: var(--gradient-hero);
+    color: white !important;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.nav-links a.btn-nav:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+}
+
 /* ===== HERO ===== */
 .hero {
     padding: 90px 0 60px;
