@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 03 - Strings & String Methods | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../python-course.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../python-course.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../python-course.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 03</div>
+            <h1>Strings &amp; String Methods</h1>
+            <p class="subtitle">Text handling, slicing, f-strings, upper(), split(), join() &mdash; text-oda full
+                control</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> String Basics</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Name board-la ezhuthurathu maari</div>
+                <p>Kadai-la name board irukkum: <strong>"Murugan Mess"</strong>. Antha text-la nee letters mathiram
+                    edukkalaam, reverse pannalaam, capital-la maathalam. Python-la string-um ithe maari &mdash; text-a
+                    store panni, manipulate pannalam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p><b>String</b> = text data. Quotes ulle irukkura ellaamey string thaan.</p>
+                <ul class="concept-list">
+                    <li>Single quotes: <code class="il">'Hello'</code></li>
+                    <li>Double quotes: <code class="il">"Hello"</code></li>
+                    <li>Triple quotes (multiline): <code class="il">'''Hello World'''</code></li>
+                    <li>Strings are <b>immutable</b> &mdash; create pannina aprom individual characters maatha
+                        mudiyaathu</li>
+                    <li>Strings are <b>indexed</b> &mdash; each character-kku oru position number irukkum (0 la start)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon code">></div>
+                <div>
+                    <h2>Worked Example</h2><span class="section-tag">Code</span>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">name</span> <span class="op">=</span> <span class="st">"Chennai"</span>
+<span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>])      <span class="cm"># C (first character)</span>
+<span class="fn">print</span>(<span class="var">name</span>[-<span class="num">1</span>])     <span class="cm"># i (last character)</span>
+<span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>:<span class="num">3</span>])   <span class="cm"># Che (slicing)</span>
+<span class="fn">print</span>(<span class="nb">len</span>(<span class="var">name</span>))    <span class="cm"># 7 (length)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> String Methods</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Important Methods</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>.upper()</b> &mdash; UPPERCASE aakkum</li>
+                    <li><b>.lower()</b> &mdash; lowercase aakkum</li>
+                    <li><b>.strip()</b> &mdash; leading/trailing spaces remove pannum</li>
+                    <li><b>.replace(old, new)</b> &mdash; text replace pannum</li>
+                    <li><b>.split(sep)</b> &mdash; string-a list-a maaththum</li>
+                    <li><b>.join(list)</b> &mdash; list-a string-a join pannum</li>
+                    <li><b>.find(sub)</b> &mdash; substring index return pannum</li>
+                    <li><b>.count(sub)</b> &mdash; sub evvalavu thadava irukkunu count pannum</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">msg</span> <span class="op">=</span> <span class="st">"  Vanakkam Chennai  "</span>
+<span class="fn">print</span>(<span class="var">msg</span>.<span class="fn">strip</span>())            <span class="cm"># "Vanakkam Chennai"</span>
+<span class="fn">print</span>(<span class="var">msg</span>.<span class="fn">strip</span>().<span class="fn">upper</span>())    <span class="cm"># "VANAKKAM CHENNAI"</span>
+<span class="fn">print</span>(<span class="var">msg</span>.<span class="fn">strip</span>().<span class="fn">replace</span>(<span class="st">"Chennai"</span>, <span class="st">"Madurai"</span>))
+<span class="cm"># "Vanakkam Madurai"</span>
+
+<span class="var">fruits</span> <span class="op">=</span> <span class="st">"apple,mango,banana"</span>
+<span class="fn">print</span>(<span class="var">fruits</span>.<span class="fn">split</span>(<span class="st">","</span>))  <span class="cm"># ['apple', 'mango', 'banana']</span>
+
+<span class="var">words</span> <span class="op">=</span> [<span class="st">"Naan"</span>, <span class="st">"Python"</span>, <span class="st">"padikirein"</span>]
+<span class="fn">print</span>(<span class="st">" "</span>.<span class="fn">join</span>(<span class="var">words</span>))  <span class="cm"># "Naan Python padikirein"</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> f-Strings (Formatted Strings)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Wedding invitation card-la name fill panra maari</div>
+                <p>Invitation card template irukkum: "We invite <strong>_____</strong> to the wedding." Blank-la name
+                    fill pannuva. f-string-um athe thaan &mdash; template-la variable values fill pannum.</p>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon code">></div>
+                <div>
+                    <h2>Worked Example</h2><span class="section-tag">Code</span>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">name</span> <span class="op">=</span> <span class="st">"Sanjay"</span>
+<span class="var">age</span> <span class="op">=</span> <span class="num">21</span>
+<span class="var">city</span> <span class="op">=</span> <span class="st">"Chennai"</span>
+
+<span class="cm"># f-string: f"..." ulle {variable} podu</span>
+<span class="fn">print</span>(<span class="st">f"Peyar: {name}, Vayasu: {age}, Ooru: {city}"</span>)
+<span class="fn">print</span>(<span class="st">f"Next year age: {age + 1}"</span>)
+<span class="fn">print</span>(<span class="st">f"Name uppercase: {name.upper()}"</span>)</pre>
+                </div>
+            </div>
+            <div class="out-wrap">
+                <div class="out-head"><span>Output</span></div>
+                <div class="out-body">
+                    <pre>Peyar: Sanjay, Vayasu: 21, Ooru: Chennai
+Next year age: 22
+Name uppercase: SANJAY</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">String index out of range</div>
+                <code class="wrong">"Hello"[10]  # IndexError</code>
+                <code class="right">"Hello"[4]   # o (last valid index)</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">String immutable-a marakka</div>
+                <code class="wrong">s = "Hello"
+s[0] = "J"  # TypeError</code>
+                <code class="right">s = "J" + s[1:]  # "Jello" (new string create pannu)</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">f-string la f marakka</div>
+                <code class="wrong">print("Name: {name}")    # literal {name} print aagum</code>
+                <code class="right">print(f"Name: {name}")   # actual value print aagum</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon exercise">?</div>
+                <div>
+                    <h2>Practice Exercises</h2><span class="section-tag">Try yourself</span>
+                </div>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q1: User peyar vaangi, uppercase, lowercase, length print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">n</span><span class="op">=</span><span class="fn">input</span>(<span class="st">"Name: "</span>)
+<span class="fn">print</span>(<span class="var">n</span>.<span class="fn">upper</span>(), <span class="var">n</span>.<span class="fn">lower</span>(), <span class="nb">len</span>(<span class="var">n</span>))</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q2: "Hello World" string-la "World" "Python" replace pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="fn">print</span>(<span class="st">"Hello World"</span>.<span class="fn">replace</span>(<span class="st">"World"</span>, <span class="st">"Python"</span>))</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q3: User email vaangi, @ munnaadi username-um pinnaadum domain-um separate-a print
+                    pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">email</span><span class="op">=</span><span class="fn">input</span>(<span class="st">"Email: "</span>)
+<span class="var">parts</span><span class="op">=</span><span class="var">email</span>.<span class="fn">split</span>(<span class="st">"@"</span>)
+<span class="fn">print</span>(<span class="st">f"User: {parts[0]}, Domain: {parts[1]}"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q4: Sentence vaangi, word count, first word, last word, reversed sentence print pannu.
+                </p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">s</span><span class="op">=</span><span class="fn">input</span>(<span class="st">"Sentence: "</span>)
+<span class="var">w</span><span class="op">=</span><span class="var">s</span>.<span class="fn">split</span>()
+<span class="fn">print</span>(<span class="st">f"Words:{len(w)} First:{w[0]} Last:{w[-1]}"</span>)
+<span class="fn">print</span>(<span class="st">"Reversed:"</span>, <span class="var">s</span>[::-<span class="num">1</span>])</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag real">Real-Life Problem</span>
+                <p class="ex-q">Q5: User full name vaangi (space separated). First letter capital, baaki small-a format
+                    pannu. Example: "rAJA kUMAR" -> "Raja Kumar"</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">name</span><span class="op">=</span><span class="fn">input</span>(<span class="st">"Full name: "</span>)
+<span class="fn">print</span>(<span class="st">"Formatted:"</span>, <span class="var">name</span>.<span class="fn">title</span>())</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-04.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 04: Conditional Statements</h3>
+                <p>if, elif, else &mdash; program-la decisions edukka kaththukko.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 03</p>
+        </footer>
+    </div>
+</body>
+
+</html>

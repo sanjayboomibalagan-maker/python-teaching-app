@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn Python basics - print(), variables, input(), and data types with real-life Indian examples, Tanglish explanations, and hands-on exercises.">
+    <title>Python Lesson 1 - Basics: print(), variables, input(), data types</title>
+    <link rel="stylesheet" href="python-lesson.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <div class="container">
+
+        <!-- ===== HERO ===== -->
+        <header class="hero">
+            <div class="lesson-badge">
+                <span class="dot"></span>
+                Lesson 01
+            </div>
+            <h1>Python Basics</h1>
+            <p class="subtitle">print(), variables, input(), data types &mdash; explained with real-life Indian examples
+                in Tanglish</p>
+        </header>
+
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <nav class="toc" id="toc">
+            <h3>In This Lesson</h3>
+            <ul class="toc-list">
+                <li><a href="#topic-print"><span class="toc-num">1</span> print() Function</a></li>
+                <li><a href="#topic-variables"><span class="toc-num">2</span> Variables</a></li>
+                <li><a href="#topic-input"><span class="toc-num">3</span> input() Function</a></li>
+                <li><a href="#topic-datatypes"><span class="toc-num">4</span> Data Types</a></li>
+                <li><a href="#section-mistakes"><span class="toc-num">5</span> Common Mistakes</a></li>
+                <li><a href="#section-exercises"><span class="toc-num">6</span> Practice Exercises</a></li>
+            </ul>
+        </nav>
+
+        <!-- ================================================================ -->
+        <!--                      TOPIC 1: print()                            -->
+        <!-- ================================================================ -->
+        <div id="topic-print">
+            <div class="sub-topic-header"><span class="sub-num">1</span> print() Function</div>
+
+            <!-- Story -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon story">S</div>
+                    <div>
+                        <h2>Real-Life Example</h2>
+                        <span class="section-tag">Story</span>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-title">Tea kadai-la order solla</div>
+                    <p>
+                        Nee oru tea kadai-ku poi, counter-la nikkura. Nee enna pannuva? <strong>"Oru tea
+                            kudunga"</strong> nu solluva, illaya? Nee sollama iruntha, kadaikkaaran unakku enna venum nu
+                        theriyaathu.
+                    </p>
+                    <p>
+                        Atha ponnu kadaikkaaran unakku tea kudukkanum na, <strong>nee solli thaan aaganum</strong>.
+                        Antha "solla" &mdash; athaan programming-la <strong>print()</strong>.
+                    </p>
+                    <p>
+                        Computer-kku nee enna venum nu sollanumna, <code class="inline">print()</code> use pannanum. Nee
+                        sollaama iruntha, computer screen-la onnum varaathu. Tea kadai-la nee vaai thirakaama ninna
+                        maari &mdash; useless.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Concept -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon concept">C</div>
+                    <div>
+                        <h2>Concept Explanation</h2>
+                        <span class="section-tag">Understanding</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <b>print()</b> is a built-in function in Python. Ithu enna pannum? Nee kudukkura text-a
+                        screen-la display pannum. Adhaan ithu panna oru velai.
+                    </p>
+                    <p>
+                        Nee enna text kudukkanum-o, atha <b>quotation marks</b> ("..." or '...') ulle podu. Aprom atha
+                        <code class="inline">print()</code>-kku kudu. Python atha screen-la print pannidum.
+                    </p>
+                    <p>
+                        Ithu verum display function. Idhu ethayum calculate pannaathu, ethayum store pannaathu. Verum
+                        kaatthidum, adhu thaan velai.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Syntax -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon syntax">$</div>
+                    <div>
+                        <h2>Python Syntax</h2>
+                        <span class="section-tag">How to write it</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>General format:</p>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="fn">print</span>(<span class="st">"Un message idhula podu"</span>)</pre>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <ul class="concept-list">
+                        <li><code class="inline">print</code> &mdash; ithu function name. Lowercase la ezhuthanum, <code
+                                class="inline">Print</code> or <code class="inline">PRINT</code> vena</li>
+                        <li><code class="inline">()</code> &mdash; round brackets. Function-a call pannura sign</li>
+                        <li><code class="inline">"..."</code> or <code class="inline">'...'</code> &mdash; un text-a
+                            ithula wrap pannu. Rendu-la ethu use pannaalum orey result thaan</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Worked Example -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon code">></div>
+                    <div>
+                        <h2>Worked Example</h2>
+                        <span class="section-tag">Code + Output</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="fn">print</span>(<span class="st">"Vanakkam, Python!"</span>)
+<span class="fn">print</span>(<span class="st">"Naan Python kaththukittu irukken."</span>)
+<span class="fn">print</span>(<span class="st">"2 + 3 ="</span>, <span class="num">2</span> + <span class="num">3</span>)</pre>
+                    </div>
+                </div>
+
+                <div class="output-block-wrapper">
+                    <div class="output-block-header"><span>Output</span></div>
+                    <div class="output-block">
+                        <pre>Vanakkam, Python!
+Naan Python kaththukittu irukken.
+2 + 3 = 5</pre>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        Line 1: Simple text print aagum. Line 2: Intha text print aagum. Line 3: Text-um number
+                        calculation-um combine pannirukkum. <code class="inline">2 + 3</code> nu Python calculate panni
+                        <span class="highlight">5</span> nu result kudukkum.
+                    </p>
+                    <p>
+                        <b>Comma (,) use pannina</b>, print() oru space vitta print pannum. "2 + 3 =" aprom space aprom
+                        5.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ================================================================ -->
+        <!--                      TOPIC 2: Variables                          -->
+        <!-- ================================================================ -->
+        <div id="topic-variables">
+            <div class="sub-topic-header"><span class="sub-num">2</span> Variables</div>
+
+            <!-- Story -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon story">S</div>
+                    <div>
+                        <h2>Real-Life Example</h2>
+                        <span class="section-tag">Story</span>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-title">Dabba-la label potta store panra maari</div>
+                    <p>
+                        Un amma kitchen-la different dabbas vechirukkanga. Oru dabba-la "Arisi" nu label irukkum, innum
+                        oru la "Paruppu" nu irukkum, vera onnula "Sakkarai" nu irukkum.
+                    </p>
+                    <p>
+                        Dabba-thaan <strong>variable</strong>. Label-thaan <strong>variable name</strong>. Ulle irukka
+                        poruluthaan <strong>value</strong>.
+                    </p>
+                    <p>
+                        Amma "paruppu kudu" nu sonna, nee <strong>"Paruppu" label irukka dabba-va</strong> edukkuva.
+                        Athe maari, Python-la nee oru name kuduththu, oru value store pannu. Aprom antha name solli
+                        antha value-a use pannu.
+                    </p>
+                    <p>
+                        Dabba-la irukka porula maathalam &mdash; arisin-a eduthu, paruppu-la poodalam. Athe maari,
+                        variable-la irukka value-yum maathalam.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Concept -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon concept">C</div>
+                    <div>
+                        <h2>Concept Explanation</h2>
+                        <span class="section-tag">Understanding</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <b>Variable</b> means oru named storage. Nee oru value-a oru name-la store pannuva. Python-la
+                        variable create panna, <code class="inline">=</code> sign use pannu. Ithukku <b>assignment
+                            operator</b> nu per.
+                    </p>
+                    <p>
+                        Left side-la name podu, right side-la value podu. Python automatic-a type decide pannidum
+                        &mdash; nee solla vendaam.
+                    </p>
+                    <p>Variable name rules:</p>
+                    <ul class="concept-list">
+                        <li>Letter or underscore (_) la start aaganum. Number la start aaga koodaathu</li>
+                        <li>Letters, numbers, underscore maththum use pannu. Spaces, special characters koodaathu</li>
+                        <li>Python reserves panna keywords (<code class="inline">if</code>, <code
+                                class="inline">for</code>, <code class="inline">print</code> etc.) variable name-a use
+                            panna koodaathu</li>
+                        <li>Case-sensitive: <code class="inline">Name</code> and <code class="inline">name</code> are
+                            different variables</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Syntax -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon syntax">$</div>
+                    <div>
+                        <h2>Python Syntax</h2>
+                        <span class="section-tag">How to write it</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="var">variable_name</span> <span class="op">=</span> <span class="var">value</span>
+
+<span class="cm"># Examples:</span>
+<span class="var">peyar</span> <span class="op">=</span> <span class="st">"Sanjay"</span>
+<span class="var">vayasu</span> <span class="op">=</span> <span class="num">21</span>
+<span class="var">vilai</span> <span class="op">=</span> <span class="num">49.50</span>
+<span class="var">is_student</span> <span class="op">=</span> <span class="kw">True</span></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Worked Example -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon code">></div>
+                    <div>
+                        <h2>Worked Example</h2>
+                        <span class="section-tag">Code + Output</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="cm"># Details store pannurom</span>
+<span class="var">kadai_peyar</span> <span class="op">=</span> <span class="st">"Murugan Tea Stall"</span>
+<span class="var">tea_vilai</span> <span class="op">=</span> <span class="num">15</span>
+<span class="var">bun_vilai</span> <span class="op">=</span> <span class="num">10</span>
+<span class="var">total</span> <span class="op">=</span> <span class="var">tea_vilai</span> + <span class="var">bun_vilai</span>
+
+<span class="fn">print</span>(<span class="st">"Kadai:"</span>, <span class="var">kadai_peyar</span>)
+<span class="fn">print</span>(<span class="st">"Tea vilai:"</span>, <span class="var">tea_vilai</span>)
+<span class="fn">print</span>(<span class="st">"Bun vilai:"</span>, <span class="var">bun_vilai</span>)
+<span class="fn">print</span>(<span class="st">"Total:"</span>, <span class="var">total</span>)</pre>
+                    </div>
+                </div>
+
+                <div class="output-block-wrapper">
+                    <div class="output-block-header"><span>Output</span></div>
+                    <div class="output-block">
+                        <pre>Kadai: Murugan Tea Stall
+Tea vilai: 15
+Bun vilai: 10
+Total: 25</pre>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <code class="inline">kadai_peyar</code> la text store pannirukkum. <code
+                            class="inline">tea_vilai</code> and <code class="inline">bun_vilai</code> numbers store
+                        pannirukku. <code class="inline">total</code> la rendu vilai-yum koottirukkom. Variables use
+                        panni, reusable-a code ezhuthirukkom. Tomorrow tea vilai 20 aana, <code
+                            class="inline">tea_vilai = 20</code> nu maathna podhum, baaki code automatic-a correct-a run
+                        aagum.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ================================================================ -->
+        <!--                      TOPIC 3: input()                            -->
+        <!-- ================================================================ -->
+        <div id="topic-input">
+            <div class="sub-topic-header"><span class="sub-num">3</span> input() Function</div>
+
+            <!-- Story -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon story">S</div>
+                    <div>
+                        <h2>Real-Life Example</h2>
+                        <span class="section-tag">Story</span>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-title">Bank-la form fill panra maari</div>
+                    <p>
+                        Nee bank-ku pona, counter-la irukka person unna kelppaan: <strong>"Unga peyar enna?"</strong>.
+                        Nee solluvaa <strong>"Sanjay"</strong> nu. Aprom kekkuvaan: <strong>"Phone number?"</strong>
+                        &mdash; nee solluvaa <strong>"9876543210"</strong> nu.
+                    </p>
+                    <p>
+                        Avan un answer-a form-la ezhuthuvan. Avan <strong>kelvi kekkuraan</strong>, nee <strong>badhil
+                            solluva</strong>, avan atha <strong>store pannuvan</strong>.
+                    </p>
+                    <p>
+                        <code class="inline">input()</code> function athaan ithu maari. Python unna oru question kekum,
+                        nee answer type pannuva, Python antha answer-a oru variable-la store pannidum.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Concept -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon concept">C</div>
+                    <div>
+                        <h2>Concept Explanation</h2>
+                        <span class="section-tag">Understanding</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <b>input()</b> function user-kitta data vaangum. Program run aagum bodhu, screen-la oru message
+                        kaatum (nee kudukkura message), aprom user type pannum varai wait pannum.
+                    </p>
+                    <p>
+                        <b>Mukkiyam:</b> <code class="inline">input()</code> <span class="highlight-pink">எப்போவும்
+                            string return pannum</span>. Nee number type pannaalum, adhuvum string thaan varum. Number-a
+                        use panna, nee convert pannanum (<code class="inline">int()</code> or <code
+                            class="inline">float()</code> use pannu).
+                    </p>
+                </div>
+            </section>
+
+            <!-- Syntax -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon syntax">$</div>
+                    <div>
+                        <h2>Python Syntax</h2>
+                        <span class="section-tag">How to write it</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="cm"># Text input vaanga:</span>
+<span class="var">variable</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Un kelvi idhula podu: "</span>)
+
+<span class="cm"># Number input vaanga:</span>
+<span class="var">variable</span> <span class="op">=</span> <span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"Number kelunga: "</span>))
+
+<span class="cm"># Decimal number input vaanga:</span>
+<span class="var">variable</span> <span class="op">=</span> <span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Decimal kelunga: "</span>))</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Worked Example -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon code">></div>
+                    <div>
+                        <h2>Worked Example</h2>
+                        <span class="section-tag">Code + Output</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="cm"># Auto-la meter reading kekka maari</span>
+<span class="var">peyar</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Unga peyar enna: "</span>)
+<span class="var">ooru</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Enga poganum: "</span>)
+<span class="var">km</span> <span class="op">=</span> <span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Evvalavu km: "</span>))
+<span class="var">rate</span> <span class="op">=</span> <span class="num">15</span>
+<span class="var">total</span> <span class="op">=</span> <span class="var">km</span> * <span class="var">rate</span>
+
+<span class="fn">print</span>(<span class="st">"Driver:"</span>, <span class="var">peyar</span>)
+<span class="fn">print</span>(<span class="st">"Destination:"</span>, <span class="var">ooru</span>)
+<span class="fn">print</span>(<span class="st">"Total fare: Rs."</span>, <span class="var">total</span>)</pre>
+                    </div>
+                </div>
+
+                <div class="output-block-wrapper">
+                    <div class="output-block-header"><span>Output (user "Sanjay", "T.Nagar", "8.5" nu type panna)</span>
+                    </div>
+                    <div class="output-block">
+                        <pre>Unga peyar enna: Sanjay
+Enga poganum: T.Nagar
+Evvalavu km: 8.5
+Driver: Sanjay
+Destination: T.Nagar
+Total fare: Rs. 127.5</pre>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <code class="inline">peyar</code> and <code class="inline">ooru</code> text-a direct-a
+                        vaangirukkum. <code class="inline">km</code> la decimal number vaanganum, adhaan <code
+                            class="inline">float()</code> use pannirukkum. <code class="inline">rate</code> fixed value.
+                        <code class="inline">total</code> la km * rate panni calculate pannirukkum. Aprom print() use
+                        panni result kaattirukkum.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ================================================================ -->
+        <!--                    TOPIC 4: Data Types                           -->
+        <!-- ================================================================ -->
+        <div id="topic-datatypes">
+            <div class="sub-topic-header"><span class="sub-num">4</span> Data Types</div>
+
+            <!-- Story -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon story">S</div>
+                    <div>
+                        <h2>Real-Life Example</h2>
+                        <span class="section-tag">Story</span>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-title">Ration card-la details maari</div>
+                    <p>
+                        Government ration card-la enna irukkum? Un <strong>peyar</strong> (Sanjay &mdash; text), un
+                        <strong>vayasu</strong> (21 &mdash; whole number), un <strong>height</strong> (5.8 &mdash;
+                        decimal number), <strong>ration card holder-ah illayah</strong> (Yes or No).
+                    </p>
+                    <p>
+                        Different type data, different-a store pannanum. Peyar-a number-la store panna mudiyuma?
+                        Mudiyaathu. Vayasu-la "Sanjay" nu store pannalaam-a? Logic-e illai.
+                    </p>
+                    <p>
+                        Atha maari Python-layum, different types of data irukkum. Every value-kkum oru
+                        <strong>type</strong> irukkum. Python automatically type decide pannum, aana nee therinjukkanum
+                        enna type irukku nu.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Concept -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon concept">C</div>
+                    <div>
+                        <h2>Concept Explanation</h2>
+                        <span class="section-tag">Understanding</span>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>Python-la 4 main basic data types irukku:</p>
+                    <ul class="concept-list">
+                        <li><b>str (String)</b> &mdash; Text data. Quotes ulle ezhuthurathellam string. Example: <code
+                                class="inline">"Vanakkam"</code>, <code class="inline">'Chennai'</code></li>
+                        <li><b>int (Integer)</b> &mdash; Whole numbers. Decimal point illai. Example: <code
+                                class="inline">10</code>, <code class="inline">-5</code>, <code class="inline">0</code>
+                        </li>
+                        <li><b>float (Floating-point)</b> &mdash; Decimal numbers. Example: <code
+                                class="inline">3.14</code>, <code class="inline">-0.5</code>, <code
+                                class="inline">100.0</code></li>
+                        <li><b>bool (Boolean)</b> &mdash; True or False maththum. Yes/No type decisions-ku use aagum.
+                            Example: <code class="inline">True</code>, <code class="inline">False</code></li>
+                    </ul>
+                    <p>
+                        <code class="inline">type()</code> function use panni, oru value enna type-nu check pannalam.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Syntax -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon syntax">$</div>
+                    <div>
+                        <h2>Python Syntax</h2>
+                        <span class="section-tag">How to write it</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="cm"># String</span>
+<span class="var">peyar</span> <span class="op">=</span> <span class="st">"Sanjay"</span>
+
+<span class="cm"># Integer</span>
+<span class="var">vayasu</span> <span class="op">=</span> <span class="num">21</span>
+
+<span class="cm"># Float</span>
+<span class="var">height</span> <span class="op">=</span> <span class="num">5.8</span>
+
+<span class="cm"># Boolean</span>
+<span class="var">is_student</span> <span class="op">=</span> <span class="kw">True</span>
+
+<span class="cm"># Type check pannalam</span>
+<span class="fn">print</span>(<span class="nb">type</span>(<span class="var">peyar</span>))      <span class="cm"># &lt;class 'str'&gt;</span>
+<span class="fn">print</span>(<span class="nb">type</span>(<span class="var">vayasu</span>))     <span class="cm"># &lt;class 'int'&gt;</span>
+<span class="fn">print</span>(<span class="nb">type</span>(<span class="var">height</span>))     <span class="cm"># &lt;class 'float'&gt;</span>
+<span class="fn">print</span>(<span class="nb">type</span>(<span class="var">is_student</span>)) <span class="cm"># &lt;class 'bool'&gt;</span></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Worked Example -->
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon code">></div>
+                    <div>
+                        <h2>Worked Example</h2>
+                        <span class="section-tag">Code + Output</span>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block-header">
+                        <span class="lang-tag">Python</span>
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="code-block">
+                        <pre><span class="cm"># Ration card details</span>
+<span class="var">peyar</span> <span class="op">=</span> <span class="st">"Murugan"</span>
+<span class="var">vayasu</span> <span class="op">=</span> <span class="num">45</span>
+<span class="var">weight</span> <span class="op">=</span> <span class="num">72.5</span>
+<span class="var">card_holder</span> <span class="op">=</span> <span class="kw">True</span>
+
+<span class="fn">print</span>(<span class="st">"Name:"</span>, <span class="var">peyar</span>, <span class="st">"- Type:"</span>, <span class="nb">type</span>(<span class="var">peyar</span>))
+<span class="fn">print</span>(<span class="st">"Age:"</span>, <span class="var">vayasu</span>, <span class="st">"- Type:"</span>, <span class="nb">type</span>(<span class="var">vayasu</span>))
+<span class="fn">print</span>(<span class="st">"Weight:"</span>, <span class="var">weight</span>, <span class="st">"- Type:"</span>, <span class="nb">type</span>(<span class="var">weight</span>))
+<span class="fn">print</span>(<span class="st">"Card holder:"</span>, <span class="var">card_holder</span>, <span class="st">"- Type:"</span>, <span class="nb">type</span>(<span class="var">card_holder</span>))
+
+<span class="cm"># Type conversion</span>
+<span class="var">age_text</span> <span class="op">=</span> <span class="st">"25"</span>
+<span class="var">age_number</span> <span class="op">=</span> <span class="nb">int</span>(<span class="var">age_text</span>)
+<span class="fn">print</span>(<span class="st">"Converted:"</span>, <span class="var">age_number</span> + <span class="num">5</span>)</pre>
+                    </div>
+                </div>
+
+                <div class="output-block-wrapper">
+                    <div class="output-block-header"><span>Output</span></div>
+                    <div class="output-block">
+                        <pre>Name: Murugan - Type: &lt;class 'str'&gt;
+Age: 45 - Type: &lt;class 'int'&gt;
+Weight: 72.5 - Type: &lt;class 'float'&gt;
+Card holder: True - Type: &lt;class 'bool'&gt;
+Converted: 30</pre>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <p>
+                        <code class="inline">type()</code> use panni each value enna type-nu confirm pannalam. <code
+                            class="inline">age_text</code> la "25" string-a irukku. Atha <code
+                            class="inline">int()</code> use panni number-a convert panni, aprom 5 koottirukkom. Convert
+                        pannaaaa, "25" + 5 error varum.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ================================================================ -->
+        <!--                    SECTION: COMMON MISTAKES                      -->
+        <!-- ================================================================ -->
+        <div id="section-mistakes">
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon mistake">!</div>
+                    <div>
+                        <h2>Common Mistakes Beginners Make</h2>
+                        <span class="section-tag">Watch out</span>
+                    </div>
+                </div>
+
+                <!-- Mistake 1 -->
+                <div class="mistake-card">
+                    <div class="mistake-title">Mistake 1: Quotes marakka (Forgetting quotes in print)</div>
+                    <p>String-a print pannumpodhu, quotes poodama iruntha, Python atha variable name nu ninaikkum.</p>
+                    <code class="wrong-code">print(Vanakkam)   # NameError: name 'Vanakkam' is not defined</code>
+                    <code class="right-code">print("Vanakkam")  # Correct: quotes poddaachi</code>
+                </div>
+
+                <!-- Mistake 2 -->
+                <div class="mistake-card">
+                    <div class="mistake-title">Mistake 2: Print nu capital letter la ezhuthurathu</div>
+                    <p>Python case-sensitive. <code class="inline">print</code> maththum correct. <code
+                            class="inline">Print</code>, <code class="inline">PRINT</code> ellam error varum.</p>
+                    <code class="wrong-code">Print("Hello")  # NameError: name 'Print' is not defined</code>
+                    <code class="right-code">print("Hello")  # Correct: lowercase print</code>
+                </div>
+
+                <!-- Mistake 3 -->
+                <div class="mistake-card">
+                    <div class="mistake-title">Mistake 3: input() return-a direct-a math-la use panrathu</div>
+                    <p><code class="inline">input()</code> always string return pannum. Atha number-a convert pannama
+                        math operation panna error varum.</p>
+                    <code class="wrong-code">age = input("Vayasu: ")
+print(age + 5)  # TypeError: can only concatenate str to str</code>
+                    <code class="right-code">age = int(input("Vayasu: "))
+print(age + 5)  # Correct: int() la convert pannachi</code>
+                </div>
+
+                <!-- Mistake 4 -->
+                <div class="mistake-card">
+                    <div class="mistake-title">Mistake 4: Variable-la space use panrathu</div>
+                    <p>Variable name-la space use panna koodaathu. Underscore (_) use pannu.</p>
+                    <code class="wrong-code">my name = "Sanjay"  # SyntaxError</code>
+                    <code class="right-code">my_name = "Sanjay"  # Correct: underscore use pannachi</code>
+                </div>
+
+                <!-- Mistake 5 -->
+                <div class="mistake-card">
+                    <div class="mistake-title">Mistake 5: = and == mix-up</div>
+                    <p><code class="inline">=</code> means assign (value store pannu). <code class="inline">==</code>
+                        means compare (same-a nu check pannu). Beginners rendaiyum confuse pannuvaa.</p>
+                    <code class="wrong-code">x = 10     # Assign: x-la 10 store aagum
+x == 10    # Compare: x 10-a nu check pannum (True/False varum)</code>
+                    <code
+                        class="right-code">Assign panna = use pannu. Compare panna == use pannu. Rendu purpose-um vera.</code>
+                </div>
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ================================================================ -->
+        <!--                    SECTION: EXERCISES                            -->
+        <!-- ================================================================ -->
+        <div id="section-exercises">
+            <section class="lesson-section">
+                <div class="section-header">
+                    <div class="section-icon exercise">?</div>
+                    <div>
+                        <h2>Practice Exercises</h2>
+                        <span class="section-tag">Try yourself</span>
+                    </div>
+                </div>
+
+                <!-- Easy 1 -->
+                <div class="exercise-card">
+                    <span class="difficulty-tag easy">Easy</span>
+                    <p class="exercise-question">Q1: Un peyar, vayasu, ooru &mdash; moonu variables create panni, print
+                        pannu.</p>
+                    <p>Output ippadi varanm:</p>
+                    <div class="output-block-wrapper">
+                        <div class="output-block-header"><span>Expected Output</span></div>
+                        <div class="output-block">
+                            <pre>Peyar: Sanjay
+Vayasu: 21
+Ooru: Chennai</pre>
+                        </div>
+                    </div>
+                    <details class="answer-toggle">
+                        <summary>Show Answer</summary>
+                        <div class="answer-content">
+                            <div class="code-block-wrapper">
+                                <div class="code-block-header">
+                                    <span class="lang-tag">Python</span>
+                                    <div class="window-dots"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="code-block">
+                                    <pre><span class="var">peyar</span> <span class="op">=</span> <span class="st">"Sanjay"</span>
+<span class="var">vayasu</span> <span class="op">=</span> <span class="num">21</span>
+<span class="var">ooru</span> <span class="op">=</span> <span class="st">"Chennai"</span>
+
+<span class="fn">print</span>(<span class="st">"Peyar:"</span>, <span class="var">peyar</span>)
+<span class="fn">print</span>(<span class="st">"Vayasu:"</span>, <span class="var">vayasu</span>)
+<span class="fn">print</span>(<span class="st">"Ooru:"</span>, <span class="var">ooru</span>)</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Easy 2 -->
+                <div class="exercise-card">
+                    <span class="difficulty-tag easy">Easy</span>
+                    <p class="exercise-question">Q2: Rendu numbers-a variables-la store panni, avanga sum, difference,
+                        product print pannu.</p>
+                    <p>Example: a = 12, b = 4</p>
+                    <div class="output-block-wrapper">
+                        <div class="output-block-header"><span>Expected Output</span></div>
+                        <div class="output-block">
+                            <pre>Sum: 16
+Difference: 8
+Product: 48</pre>
+                        </div>
+                    </div>
+                    <details class="answer-toggle">
+                        <summary>Show Answer</summary>
+                        <div class="answer-content">
+                            <div class="code-block-wrapper">
+                                <div class="code-block-header">
+                                    <span class="lang-tag">Python</span>
+                                    <div class="window-dots"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="code-block">
+                                    <pre><span class="var">a</span> <span class="op">=</span> <span class="num">12</span>
+<span class="var">b</span> <span class="op">=</span> <span class="num">4</span>
+
+<span class="fn">print</span>(<span class="st">"Sum:"</span>, <span class="var">a</span> + <span class="var">b</span>)
+<span class="fn">print</span>(<span class="st">"Difference:"</span>, <span class="var">a</span> - <span class="var">b</span>)
+<span class="fn">print</span>(<span class="st">"Product:"</span>, <span class="var">a</span> * <span class="var">b</span>)</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Medium 1 -->
+                <div class="exercise-card">
+                    <span class="difficulty-tag medium">Medium</span>
+                    <p class="exercise-question">Q3: User-kitta peyar and birth year vaangi, avanga age calculate panni
+                        print pannu.</p>
+                    <p>Hint: Current year 2026. Age = 2026 - birth_year.</p>
+                    <div class="output-block-wrapper">
+                        <div class="output-block-header"><span>Expected Output</span></div>
+                        <div class="output-block">
+                            <pre>Unga peyar enna: Raja
+Birth year enna: 2000
+Raja, unga vayasu 26</pre>
+                        </div>
+                    </div>
+                    <details class="answer-toggle">
+                        <summary>Show Answer</summary>
+                        <div class="answer-content">
+                            <div class="code-block-wrapper">
+                                <div class="code-block-header">
+                                    <span class="lang-tag">Python</span>
+                                    <div class="window-dots"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="code-block">
+                                    <pre><span class="var">peyar</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Unga peyar enna: "</span>)
+<span class="var">birth_year</span> <span class="op">=</span> <span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"Birth year enna: "</span>))
+<span class="var">age</span> <span class="op">=</span> <span class="num">2026</span> - <span class="var">birth_year</span>
+
+<span class="fn">print</span>(<span class="var">peyar</span> + <span class="st">", unga vayasu "</span> + <span class="nb">str</span>(<span class="var">age</span>))</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Medium 2 -->
+                <div class="exercise-card">
+                    <span class="difficulty-tag medium">Medium</span>
+                    <p class="exercise-question">Q4: User-kitta Celsius temperature vaangi, atha Fahrenheit-la convert
+                        pannu.</p>
+                    <p>Formula: F = (C * 9/5) + 32</p>
+                    <div class="output-block-wrapper">
+                        <div class="output-block-header"><span>Expected Output</span></div>
+                        <div class="output-block">
+                            <pre>Celsius temperature kudu: 37
+37.0 Celsius = 98.6 Fahrenheit</pre>
+                        </div>
+                    </div>
+                    <details class="answer-toggle">
+                        <summary>Show Answer</summary>
+                        <div class="answer-content">
+                            <div class="code-block-wrapper">
+                                <div class="code-block-header">
+                                    <span class="lang-tag">Python</span>
+                                    <div class="window-dots"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="code-block">
+                                    <pre><span class="var">celsius</span> <span class="op">=</span> <span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Celsius temperature kudu: "</span>))
+<span class="var">fahrenheit</span> <span class="op">=</span> (<span class="var">celsius</span> * <span class="num">9</span>/<span class="num">5</span>) + <span class="num">32</span>
+
+<span class="fn">print</span>(<span class="var">celsius</span>, <span class="st">"Celsius ="</span>, <span class="var">fahrenheit</span>, <span class="st">"Fahrenheit"</span>)</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Real-life Problem -->
+                <div class="exercise-card">
+                    <span class="difficulty-tag real">Real-Life Problem</span>
+                    <p class="exercise-question">Q5: Auto fare calculator &mdash; User-kitta starting place, ending
+                        place, km distance vaangu. Base fare = Rs.25, per km rate = Rs.12. Total fare calculate panni
+                        bill format-la print pannu.</p>
+                    <div class="output-block-wrapper">
+                        <div class="output-block-header"><span>Expected Output</span></div>
+                        <div class="output-block">
+                            <pre>===== AUTO BILL =====
+From: Tambaram
+To: Guindy
+Distance: 18.0 km
+Base fare: Rs. 25
+Per km charge: Rs. 216.0
+---------------------
+Total fare: Rs. 241.0
+=====================</pre>
+                        </div>
+                    </div>
+                    <details class="answer-toggle">
+                        <summary>Show Answer</summary>
+                        <div class="answer-content">
+                            <div class="code-block-wrapper">
+                                <div class="code-block-header">
+                                    <span class="lang-tag">Python</span>
+                                    <div class="window-dots"><span></span><span></span><span></span></div>
+                                </div>
+                                <div class="code-block">
+                                    <pre><span class="var">start</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Starting place: "</span>)
+<span class="var">end</span> <span class="op">=</span> <span class="fn">input</span>(<span class="st">"Ending place: "</span>)
+<span class="var">km</span> <span class="op">=</span> <span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Distance in km: "</span>))
+
+<span class="var">base_fare</span> <span class="op">=</span> <span class="num">25</span>
+<span class="var">per_km_rate</span> <span class="op">=</span> <span class="num">12</span>
+<span class="var">km_charge</span> <span class="op">=</span> <span class="var">km</span> * <span class="var">per_km_rate</span>
+<span class="var">total</span> <span class="op">=</span> <span class="var">base_fare</span> + <span class="var">km_charge</span>
+
+<span class="fn">print</span>(<span class="st">"===== AUTO BILL ====="</span>)
+<span class="fn">print</span>(<span class="st">"From:"</span>, <span class="var">start</span>)
+<span class="fn">print</span>(<span class="st">"To:"</span>, <span class="var">end</span>)
+<span class="fn">print</span>(<span class="st">"Distance:"</span>, <span class="var">km</span>, <span class="st">"km"</span>)
+<span class="fn">print</span>(<span class="st">"Base fare: Rs."</span>, <span class="var">base_fare</span>)
+<span class="fn">print</span>(<span class="st">"Per km charge: Rs."</span>, <span class="var">km_charge</span>)
+<span class="fn">print</span>(<span class="st">"---------------------"</span>)
+<span class="fn">print</span>(<span class="st">"Total fare: Rs."</span>, <span class="var">total</span>)
+<span class="fn">print</span>(<span class="st">"====================="</span>)</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+            </section>
+        </div>
+
+        <hr class="topic-divider">
+
+        <!-- ===== NEXT LESSON BANNER ===== -->
+        <div class="next-lesson">
+            <div class="next-label">Up Next</div>
+            <h3>Lesson 02: Operators &amp; Expressions</h3>
+            <p>Arithmetic, Comparison, Logical operators &mdash; how Python makes decisions and does math.</p>
+            <div class="arrow-icon">&rarr;</div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="lesson-footer">
+            <p>Python Learning Series &mdash; Designed for absolute beginners &mdash; Tanglish Edition</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

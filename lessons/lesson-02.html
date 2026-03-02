@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 02 - Operators & Expressions | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../python-course.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../python-course.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../python-course.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 02</div>
+            <h1>Operators &amp; Expressions</h1>
+            <p class="subtitle">Arithmetic, Comparison, Logical, Assignment &mdash; Python-la math and decisions</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Arithmetic Operators</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Kadai-la bill calculate panra maari</div>
+                <p>Tea=15, Bun=10, Bajji=20. Total? <strong>15+10+20=45</strong>. Friend-ku share?
+                    <strong>45/2=22.50</strong>. Ithu thaan arithmetic.</p>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>+</b> Addition | <b>-</b> Subtraction | <b>*</b> Multiplication</li>
+                    <li><b>/</b> Division (float) | <b>//</b> Floor division (int) | <b>%</b> Modulus (remainder)</li>
+                    <li><b>**</b> Power &mdash; 2**3 = 8</li>
+                </ul>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon code">></div>
+                <div>
+                    <h2>Worked Example</h2><span class="section-tag">Code</span>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">a</span>, <span class="var">b</span> <span class="op">=</span> <span class="num">17</span>, <span class="num">5</span>
+<span class="fn">print</span>(<span class="st">"Add:"</span>, <span class="var">a</span>+<span class="var">b</span>)    <span class="cm"># 22</span>
+<span class="fn">print</span>(<span class="st">"Div:"</span>, <span class="var">a</span>/<span class="var">b</span>)    <span class="cm"># 3.4</span>
+<span class="fn">print</span>(<span class="st">"Floor:"</span>, <span class="var">a</span>//<span class="var">b</span>) <span class="cm"># 3</span>
+<span class="fn">print</span>(<span class="st">"Mod:"</span>, <span class="var">a</span>%<span class="var">b</span>)    <span class="cm"># 2</span>
+<span class="fn">print</span>(<span class="st">"Power:"</span>, <span class="var">a</span>**<span class="num">2</span>)  <span class="cm"># 289</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Comparison Operators</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Exam pass/fail check</div>
+                <p>35 marks-kku mela pass. Nee 42 vaanguna: <strong>42>=35 = True</strong> = pass!</p>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>==</b> Equal | <b>!=</b> Not equal</li>
+                    <li><b>&gt;</b> Greater | <b>&lt;</b> Less | <b>&gt;=</b> Greater or equal | <b>&lt;=</b> Less or
+                        equal</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">marks</span> <span class="op">=</span> <span class="num">42</span>
+<span class="fn">print</span>(<span class="var">marks</span> >= <span class="num">35</span>)  <span class="cm"># True</span>
+<span class="fn">print</span>(<span class="var">marks</span> <span class="op">==</span> <span class="num">100</span>) <span class="cm"># False</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> Logical Operators</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">College admission eligibility</div>
+                <p>Admission-ku: <strong>12th marks>=60 AND entrance pass</strong>. Rendu-um True na thaan admission.
+                    Scholarship-ku: <strong>Sports OR merit</strong> &mdash; onnaavathu True na podhum.</p>
+            </div>
+        </section>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon code">></div>
+                <div>
+                    <h2>Worked Example</h2><span class="section-tag">Code</span>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">marks</span> <span class="op">=</span> <span class="num">75</span>
+<span class="var">entrance</span> <span class="op">=</span> <span class="kw">True</span>
+<span class="fn">print</span>(<span class="var">marks</span> >= <span class="num">60</span> <span class="kw">and</span> <span class="var">entrance</span>)  <span class="cm"># True</span>
+<span class="fn">print</span>(<span class="kw">not</span> <span class="kw">False</span>)  <span class="cm"># True</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+
+        <!-- Mistakes -->
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">= vs == confusion</div>
+                <code class="wrong">if x = 10:   # SyntaxError</code>
+                <code class="right">if x == 10:  # Correct</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Division by zero</div>
+                <code class="wrong">10 / 0  # ZeroDivisionError</code>
+                <code class="right">Always check: if b != 0</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+
+        <!-- Exercises -->
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon exercise">?</div>
+                <div>
+                    <h2>Practice Exercises</h2><span class="section-tag">Try yourself</span>
+                </div>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q1: a=20, b=7. All 7 arithmetic results print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">a</span>,<span class="var">b</span> <span class="op">=</span> <span class="num">20</span>,<span class="num">7</span>
+<span class="fn">print</span>(<span class="var">a</span>+<span class="var">b</span>, <span class="var">a</span>-<span class="var">b</span>, <span class="var">a</span>*<span class="var">b</span>, <span class="var">a</span>/<span class="var">b</span>, <span class="var">a</span>//<span class="var">b</span>, <span class="var">a</span>%<span class="var">b</span>, <span class="var">a</span>**<span class="var">b</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q2: Number odd-a even-a check pannu (% use pannu).</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">n</span> <span class="op">=</span> <span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"Number: "</span>))
+<span class="fn">print</span>(<span class="st">"Even:"</span>, <span class="var">n</span> % <span class="num">2</span> <span class="op">==</span> <span class="num">0</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q3: 3 subject marks vaangi total, average, pass/fail (avg>=35) print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">m1</span><span class="op">=</span><span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"S1: "</span>))
+<span class="var">m2</span><span class="op">=</span><span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"S2: "</span>))
+<span class="var">m3</span><span class="op">=</span><span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"S3: "</span>))
+<span class="var">avg</span><span class="op">=</span>(<span class="var">m1</span>+<span class="var">m2</span>+<span class="var">m3</span>)/<span class="num">3</span>
+<span class="fn">print</span>(<span class="st">"Avg:"</span>,<span class="var">avg</span>,<span class="st">"Pass:"</span>,<span class="var">avg</span>>=<span class="num">35</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q4: Electricity bill: units vaangu. 0-100=Rs.2, 100-200=Rs.4, 200+=Rs.7.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">u</span><span class="op">=</span><span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"Units: "</span>))
+<span class="var">b</span><span class="op">=</span><span class="num">100</span>*<span class="num">2</span>+<span class="num">100</span>*<span class="num">4</span>+(<span class="var">u</span>-<span class="num">200</span>)*<span class="num">7</span>
+<span class="fn">print</span>(<span class="st">"Bill: Rs."</span>,<span class="var">b</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag real">Real-Life Problem</span>
+                <p class="ex-q">Q5: Shopping: 3 items price vaangi, 18% GST add, total bill print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">p1</span><span class="op">=</span><span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Item1: "</span>))
+<span class="var">p2</span><span class="op">=</span><span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Item2: "</span>))
+<span class="var">p3</span><span class="op">=</span><span class="nb">float</span>(<span class="fn">input</span>(<span class="st">"Item3: "</span>))
+<span class="var">sub</span><span class="op">=</span><span class="var">p1</span>+<span class="var">p2</span>+<span class="var">p3</span>
+<span class="fn">print</span>(<span class="st">"Sub:"</span>,<span class="var">sub</span>,<span class="st">"GST:"</span>,<span class="var">sub</span>*<span class="num">0.18</span>,<span class="st">"Total:"</span>,<span class="var">sub</span>*<span class="num">1.18</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-03.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 03: Strings &amp; String Methods</h3>
+                <p>Text handling, slicing, f-strings, and powerful string methods.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 02</p>
+        </footer>
+    </div>
+</body>
+
+</html>
