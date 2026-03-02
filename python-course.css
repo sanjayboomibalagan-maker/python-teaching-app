@@ -178,6 +178,9 @@ body {
     font-weight: 700;
 }
 
+
+
+
 .nav-links a.btn-nav:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
