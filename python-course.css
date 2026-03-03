@@ -41,6 +41,19 @@
     margin-top: 40px;
 }
 
+@media (max-width: 992px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+    }
+}
+
 .sidebar {
     position: sticky;
     top: 100px;
@@ -137,6 +150,29 @@
 .tool-card:hover {
     border-color: var(--accent-primary);
     transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .sidebar-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+    }
+
+    .quick-tools {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+    }
+
+    .cheat-sheet-btn {
+        margin-top: 0;
+    }
+
+    .pro-tip {
+        display: none;
+    }
 }
 
 .tool-icon {
@@ -264,6 +300,16 @@
     justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+    .modal-header {
+        padding: 15px 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.15rem;
+    }
+}
+
 .close-modal {
     background: none;
     border: none;
@@ -280,6 +326,12 @@
 .modal-body {
     padding: 40px;
     overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .modal-body {
+        padding: 20px;
+    }
 }
 
 .cheat-grid {
@@ -442,6 +494,12 @@ body {
     padding: 0 28px;
 }
 
+@media (max-width: 580px) {
+    .container {
+        padding: 0 18px;
+    }
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
     position: sticky;
@@ -467,6 +525,13 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 1.1rem;
+    }
 }
 
 .nav-links {
@@ -581,6 +646,12 @@ body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+    .hero-stats {
+        gap: 20px 30px;
+    }
+}
+
 .stat-item {
     text-align: center;
 }
@@ -665,6 +736,12 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 18px;
+}
+
+@media (max-width: 680px) {
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== TOPIC CARD ===== */
@@ -808,32 +885,53 @@ body {
     font-size: 0.82rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE OVERRIDES ===== */
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 0 50px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
+        letter-spacing: -1px;
     }
 
-    .topic-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-stats {
-        gap: 24px;
+    .hero .subtitle {
+        font-size: 1.1rem;
+        padding: 0 10px;
     }
 
     .nav-links {
         display: none;
+        /* Keep it simple for now, Dash uses Sidebar */
+    }
+
+    .level-header h2 {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 50px 0 30px;
+        padding: 60px 0 40px;
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .stat-num {
+        font-size: 1.5rem;
     }
 }
 
@@ -904,11 +1002,27 @@ body {
     background-clip: text;
 }
 
+@media (max-width: 768px) {
+    .lesson-hero h1 {
+        font-size: 2rem;
+    }
+
+    .lesson-hero {
+        padding: 20px 0 30px;
+    }
+}
+
 .lesson-hero .subtitle {
     font-size: 1.05rem;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .lesson-hero .subtitle {
+        font-size: 0.95rem;
+    }
 }
 
 /* Section headers */
@@ -1450,6 +1564,17 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow-glow);
     transition: var(--transition-smooth);
+}
+
+@media (max-width: 600px) {
+    .next-lesson {
+        padding: 25px 20px;
+        border-radius: var(--radius-lg);
+    }
+
+    .next-lesson h3 {
+        font-size: 1.25rem;
+    }
 }
 
 .next-lesson:hover {
@@ -2101,6 +2226,12 @@ code.il {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
     color: var(--accent-primary);
+}
+
+@media (max-width: 480px) {
+    .anatomy-parts {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Floating Elements for Premium look */
