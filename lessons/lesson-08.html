@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 08 - Dictionaries | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 08</div>
+            <h1>Dictionaries</h1>
+            <p class="subtitle">Key-Value Pairs &mdash; mapping and fast lookup concepts</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Dictionary Basics</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Mobile Contact List (Phonebook)</div>
+                    <p>Unga mobile contacts poidunga. Inga oru "Name" ezhuthirukkum, athukku ethura oru "Phone Number"
+                        irukkum. Name thaan <b>Key</b>, Number thaan <b>Value</b>. Index number use pannama, peyar-a
+                        vachi
+                        information edukkalam. Ithu thaan <b>Dictionary</b>.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(240, 192, 64, 0.1); font-size:4rem;">
+                        📱</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p><b>Dictionary</b> curly braces <b>{ }</b> ulla <b>key:value</b> format-la ezhuthanam.</p>
+            </div>
+
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="var">user</span> <span class="op">=</span> <span
+                        class="op">{</span><span class="st">"name"</span><span class="op">:</span> <span
+                        class="st">"Sanjay"</span><span class="op">}</span></div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">Key</span>
+                        <span class="part-val">"name"</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Separator</span>
+                        <span class="part-val">: (Colon)</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Value</span>
+                        <span class="part-val">"Sanjay"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: Custom Keys</h4>
+                <p>Dictionary-la keys unique-a irukanum. Orey key-a thirumba use panna, pazhaya value update aagidum.
+                    <br> <code class="il">D = {"a":1, "a":2}</code> &mdash; ippa "a" oda value 2 thaan irukkum!</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">contact_list</span> <span class="op">=</span> {
+    <span class="st">"Raja"</span>: <span class="num">9876543210</span>,
+    <span class="st">"Sanjay"</span>: <span class="num">8877665544</span>
+}
+
+<span class="fn">print</span>(<span class="var">contact_list</span>[<span class="st">"Raja"</span>])  <span class="cm"># 9876543210 (Access by Key)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> CRUD Operations (Create, Read, Update, Delete)</div>
+        <section class="lesson-section">
+            <div class="cheat-sheet-banner">
+                <div class="cs-item"><span class="cs-label">Just Keys</span><code>.keys()</code></div>
+                <div class="cs-item"><span class="cs-label">Just Values</span><code>.values()</code></div>
+                <div class="cs-item"><span class="cs-label">Both</span><code>.items()</code></div>
+                <div class="cs-item"><span class="cs-label">Safe Read</span><code>.get()</code></div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">user</span> <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Arun"</span>, <span class="st">"city"</span>: <span class="st">"Chennai"</span>}
+
+<span class="cm"># Create/Update</span>
+<span class="var">user</span>[<span class="st">"age"</span>] <span class="op">=</span> <span class="num">25</span>
+<span class="var">user</span>[<span class="st">"city"</span>] <span class="op">=</span> <span class="st">"Madurai"</span>
+
+<span class="cm"># Read with .get() (safe way)</span>
+<span class="fn">print</span>(<span class="var">user</span>.<span class="fn">get</span>(<span class="st">"job"</span>, <span class="st">"Not Found"</span>))
+
+<span class="cm"># Delete</span>
+<span class="kw">del</span> <span class="var">user</span>[<span class="st">"age"</span>]
+<span class="var">user</span>.<span class="fn">pop</span>(<span class="st">"city"</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="08">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Key-Value Check!</h2>
+                <p>Dictionary concepts clear-a irukkanu check pannalam.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="curly">
+                <p class="quiz-q">1. Dictionary create panna enna symbols use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="square">[] Square brackets</div>
+                    <div class="quiz-opt" data-value="curly">{} Curly braces</div>
+                    <div class="quiz-opt" data-value="parens">() Parentheses</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="key">
+                <p class="quiz-q">2. Dictionary-la identifier (name) part-a ennanu solluvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="value">Value</div>
+                    <div class="quiz-opt" data-value="index">Index</div>
+                    <div class="quiz-opt" data-value="key">Key</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="unique">
+                <p class="quiz-q">3. Dictionay Keys eppadi irukkanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="duplicate">Duplicate-a irukalam</div>
+                    <div class="quiz-opt" data-value="unique">Unique-a irukanun (duplicates forbidden)</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="get">
+                <p class="quiz-q">4. Oru key irukkanu safe-a check panna enna method best?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="find">find()</div>
+                    <div class="quiz-opt" data-value="get">get()</div>
+                    <div class="quiz-opt" data-value="read">read()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="items">
+                <p class="quiz-q">5. Both Keys and Values rendaeyum ore loop-la edukka enna method venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="keys">.keys()</div>
+                    <div class="quiz-opt" data-value="values">.values()</div>
+                    <div class="quiz-opt" data-value="items">.items()</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-09.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 09: Sets</h3>
+                <p>Unique collections, set operations &mdash; union, intersection, difference.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 08</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

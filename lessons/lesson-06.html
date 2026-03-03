@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 06 - Lists & List Methods | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 06</div>
+            <h1>Lists &amp; List Methods</h1>
+            <p class="subtitle">Collections of data &mdash; multiple items-a store panna lists thaan easy way</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> List Basics & Creation</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Grocery List (Maligai Porul List)</div>
+                    <p>Kadaikku poga munnaadi paper-la oru list ezhuthuva: "Pal, Muttai, Bread, Arisi". Intha list-la
+                        items-a nee order-la vachirupa. 1st item ethu? 3rd item ethu nu unnakku theriyum. Python-la ithe
+                        thaan <b>List</b>.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(0, 212, 170, 0.1); font-size:4rem;">
+                        🛒</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p><b>List</b> square brackets <b>[ ]</b> ulla comma separate panni ezhuthanum. Ithu oru collection
+                    maari!</p>
+            </div>
+
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="var">fruits</span> <span class="op">=</span> <span
+                        class="op">[</span><span class="st">"Apple"</span><span class="op">,</span> <span
+                        class="st">"Mango"</span><span class="op">]</span></div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">List Name</span>
+                        <span class="part-val">fruits</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Brackets</span>
+                        <span class="part-val">[ ]</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Items</span>
+                        <span class="part-val">"Apple", "Mango"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: Heterogeneous Data</h4>
+                <p>Python List-la nee mixed data types-um store pannalam. Ore list ulla String, Integer, and Boolean-um
+                    irukkalam. <br> <code class="il">L = ["Sanjay", 25, True]</code> &mdash; ithu valid!</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">fruits</span> <span class="op">=</span> [<span class="st">"Apple"</span>, <span class="st">"Mango"</span>, <span class="st">"Banana"</span>]
+<span class="fn">print</span>(<span class="var">fruits</span>[<span class="num">0</span>])     <span class="cm"># Apple</span>
+<span class="fn">print</span>(<span class="var">fruits</span>[<span class="num">0</span>:<span class="num">2</span>])   <span class="cm"># Slice (Apple, Mango)</span>
+<span class="fn">print</span>(<span class="nb">len</span>(<span class="var">fruits</span>))    <span class="cm"># 3 items</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Adding & Removing Items</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>List Methods</h2><span class="section-tag">Essential Methods</span>
+                </div>
+            </div>
+            <div class="cheat-sheet-banner">
+                <div class="cs-item"><span class="cs-label">Add End</span><code>.append()</code></div>
+                <div class="cs-item"><span class="cs-label">Add Pos</span><code>.insert()</code></div>
+                <div class="cs-item"><span class="cs-label">Remove Item</span><code>.remove()</code></div>
+                <div class="cs-item"><span class="cs-label">Remove Last</span><code>.pop()</code></div>
+                <div class="cs-item"><span class="cs-label">Sort A-Z</span><code>.sort()</code></div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">super_heroes</span> <span class="op">=</span> [<span class="st">"Ironman"</span>, <span class="st">"Spiderman"</span>]
+<span class="var">super_heroes</span>.<span class="fn">append</span>(<span class="st">"Batman"</span>)    <span class="cm"># ["Ironman", "Spiderman", "Batman"]</span>
+<span class="var">super_heroes</span>.<span class="fn">insert</span>(<span class="num">0</span>, <span class="st">"Thor"</span>)    <span class="cm"># Thor first varun</span>
+<span class="var">super_heroes</span>.<span class="fn">remove</span>(<span class="st">"Spiderman"</span>)
+<span class="var">super_heroes</span>.<span class="fn">sort</span>()              <span class="cm"># A-Z arrange</b></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> Iterating over Lists</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Loops with Lists</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Checking Attendance</div>
+                <p>Attendance register-la names irukkum. Techer ovvonu name-a kooptu check pannu vaanga. Python-la
+                    list-ulla irukkura items-a <b>for loop</b> use panni access pannalam.</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">students</span> <span class="op">=</span> [<span class="st">"Raja"</span>, <span class="st">"Kumar"</span>, <span class="st">"Sanjay"</span>]
+
+<span class="kw">for</span> <span class="var">s</span> <span class="kw">in</span> <span class="var">students</span>:
+    <span class="fn">print</span>(<span class="st">"Welcome,"</span>, <span class="var">s</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Index Out of Range</div>
+                <code class="wrong">L = [1, 2]
+print(L[5]) # Error! Only 0, 1 possible</code>
+                <code class="right">print(L[1]) # Correct</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">append() vs extend()</div>
+                <p>append full list-a ore item-a add pannum. extend inside items-a add pannum.</p>
+                <code class="wrong">L = [1, 2]
+L.append([3, 4]) # [1, 2, [3, 4]] - Nested!</code>
+                <code class="right">L.extend([3, 4]) # [1, 2, 3, 4] - Joined!</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon exercise">?</div>
+                <div>
+                    <h2>Practice Exercises</h2><span class="section-tag">Try yourself</span>
+                </div>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q1: "Cricket", "Football", "Hockey" nu oru list create panni, "Tennis" append pannunga.
+                </p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">sports</span><span class="op">=</span>[<span class="st">"Cricket"</span>, <span class="st">"Football"</span>, <span class="st">"Hockey"</span>]
+<span class="var">sports</span>.<span class="fn">append</span>(<span class="st">"Tennis"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q2: List [10, 20, 30, 40] reversal pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">nums</span><span class="op">=</span>[<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>]
+<span class="var">nums</span>.<span class="fn">reverse</span>()
+<span class="fn">print</span>(<span class="var">nums</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q3: Oru list of numbers vaangi athoda sum (total) and average kandupidinga.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">L</span><span class="op">=</span>[<span class="num">10</span>, <span class="num">20</span>, <span class="num">30</span>, <span class="num">40</span>]
+<span class="var">total</span><span class="op">=</span><span class="nb">sum</span>(<span class="var">L</span>)
+<span class="var">avg</span><span class="op">=</span><span class="var">total</span><span class="op">/</span><span class="nb">len</span>(<span class="var">L</span>)
+<span class="fn">print</span>(<span class="var">total</span>, <span class="var">avg</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q4: List-la irukkura duplicate elements-a eppadi remove pannuva? (Hint: Set or Loops).
+                </p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">nums</span><span class="op">=</span>[<span class="num">1</span>, <span class="num">2</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">1</span>]
+<span class="var">unique</span> <span class="op">=</span> <span class="nb">list</span>(<span class="nb">set</span>(<span class="var">nums</span>))
+<span class="fn">print</span>(<span class="var">unique</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag real">Real-Life Problem</span>
+                <p class="ex-q">Q5: List-la irukkura numbers-la "Largest Number" kandupidi loops use panni (don't use
+                    max()).</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">L</span> <span class="op">=</span> [<span class="num">45</span>, <span class="num">67</span>, <span class="num">8</span>, <span class="num">92</span>, <span class="num">34</span>]
+<span class="var">big</span> <span class="op">=</span> <span class="var">L</span>[<span class="num">0</span>]
+<span class="kw">for</span> <span class="var">n</span> <span class="kw">in</span> <span class="var">L</span>:
+    <span class="kw">if</span> <span class="var">n</span> <span class="op">></span> <span class="var">big</span>:
+        <span class="var">big</span> <span class="op">=</span> <span class="var">n</span>
+<span class="fn">print</span>(<span class="st">"Largest:"</span>, <span class="var">big</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="06">
+            <div class="quiz-header">
+                <h2>Quick Quiz – List handling check!</h2>
+                <p>Lists concepts clear-a irukkanu check pannalam.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="0">
+                <p class="quiz-q">1. List-la mudhal element oda position (index) enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="1">1</div>
+                    <div class="quiz-opt" data-value="0">0</div>
+                    <div class="quiz-opt" data-value="-1">-1</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="append">
+                <p class="quiz-q">2. List oda end-la oru item-a add panna enna method use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="add">add()</div>
+                    <div class="quiz-opt" data-value="insert">insert()</div>
+                    <div class="quiz-opt" data-value="append">append()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="pop">
+                <p class="quiz-q">3. List-la irukkura last item-a remove panna ethu use aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="pop">pop()</div>
+                    <div class="quiz-opt" data-value="remove">remove()</div>
+                    <div class="quiz-opt" data-value="delete">delete()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="insert">
+                <p class="quiz-q">4. Oru item-a specific position-la (oar idathula) add panna enna method venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="append">append()</div>
+                    <div class="quiz-opt" data-value="insert">insert()</div>
+                    <div class="quiz-opt" data-value="place">place()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="sort">
+                <p class="quiz-q">5. List-la irukkura elements-a order-a (A-Z) arrange panna enna method use pannuvom?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="order">order()</div>
+                    <div class="quiz-opt" data-value="sort">sort()</div>
+                    <div class="quiz-opt" data-value="arrange">arrange()</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-07.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 07: Tuples</h3>
+                <p>Immutable sequences, tuple packing/unpacking, when to use tuples.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 06</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

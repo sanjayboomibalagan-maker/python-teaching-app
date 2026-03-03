@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 30 - Final Project &amp; Graduation | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+    <style>
+        .graduation-card {
+            background: var(--gradient-hero);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .grad-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .grad-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 30</div>
+            <h1>Final Project & Best Practices</h1>
+            <p class="subtitle">Complete Python Rockstar &mdash; PEP8, Project Structure, and the Ultimate Graduation!
+            </p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Coding Best Practices (PEP8)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Clean Code</h2><span class="section-tag">Guidelines</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Code ezhuthuradhu mattum mukkiyamm illa, adhu innooru person-ku puriyura maari ezhuthanum. Python-la
+                    standard coding style-a **PEP8**-nu solluvom.</p>
+                <ul class="concept-list">
+                    <li><b>Indentation</b>: Always use 4 spaces.</li>
+                    <li><b>Naming</b>: Variables-ku `snake_case`, Classes-ku `PascalCase` use pannanum.</li>
+                    <li><b>Documentation</b>: Docstrings (`"""Docstring"""`) vachi functions-a explain pannanum.</li>
+                    <li><b>Refactoring</b>: Orer logic-a thirumba thirumba ezhuthaama, functions-a break pannanum (**DRY
+                        - Don't Repeat Yourself**).</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> The Final Project Idea</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Final Challenge</h2><span class="section-tag">Implementation</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Library Management System 2.0</div>
+                <p>Namma ippo kathukitta ellathaiyum mix pannanum:</p>
+                <ul class="concept-list">
+                    <li><b>Files/DB</b>: Book records storage-ku use pannanum.</li>
+                    <li><b>OOP</b>: `Book` and `Member` classes create pannanum.</li>
+                    <li><b>Exceptions</b>: Wrong input-a handle pannanum.</li>
+                    <li><b>Modules</b>: Logic-a separate files-la split pannanum.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section graduation-card">
+            <h2 class="grad-title">🎉 Python Mastery Graduation!</h2>
+            <p class="grad-text">Congratultions! Lesson 1-la irundhu Lesson 30 varai vandhu Python Master aayitinga!</p>
+            <div style="font-size: 5rem; margin: 20px 0;">🎓👑🐍</div>
+            <p style="font-style: italic;">"Coding is not just about logic, it's a superpower to build anything you
+                imagine."</p>
+        </section>
+
+        <section class="lesson-section quiz-section" data-lesson="30">
+            <div class="quiz-header">
+                <h2>Final Milestone Quiz</h2>
+                <p>Master status confirm panna intha quiz solve pannu!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="snake_case">
+                <p class="quiz-q">1. Python variable naming convention standard enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="camelCase">camelCase</div>
+                    <div class="quiz-opt" data-value="snake_case">snake_case</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Pythonistas **snake_case** (words separated by
+                    underscores) thaan prefer pannuvom.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="PEP8">
+                <p class="quiz-q">2. Python coding style guidelines-a epdi call pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="PEP8">PEP8</div>
+                    <div class="quiz-opt" data-value="STYLE1">STYLE1</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **PEP 8** is the primary style guide for Python code.
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="Docstring">
+                <p class="quiz-q">3. Multiple lines of code commentary/documentation-ku enna use pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="Docstring">Docstring (""")</div>
+                    <div class="quiz-opt" data-value="Comment">Single comment (#)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **Docstrings** functions/modules-a professionally
+                    document panna best.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="DRY">
+                <p class="quiz-q">4. "Don't Repeat Yourself" principle-a short-a epdi solluvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="FAST">FAST</div>
+                    <div class="quiz-opt" data-value="DRY">DRY</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **DRY** (Don't Repeat Yourself) thaan clean coding-la
+                    main principle.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="YES">
+                <p class="quiz-q">5. Ippo nee oru real-world project create panna ready-ah?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="YES">YES! Ready to code!</div>
+                    <div class="quiz-opt" data-value="NO">No, wait...</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Of course! Knowledge and Logic Master aayache! Go
+                    build magic! 🐍🌟</div>
+            </div>
+
+            <button class="quiz-submit-btn">Finish Course & Celebrate</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="../index.html">
+                <div class="nl-label">Course Completed</div>
+                <h3>Back to Dashboard</h3>
+                <p>View your 100% progress and badges!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; 30 Lessons Completed &mdash; 2026</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

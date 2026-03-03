@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 18 - Lambda, Map & Filter | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 18</div>
+            <h1>Lambda, Map &amp; Filter</h1>
+            <p class="subtitle">Functional Tools &mdash; Anonymous functions and data processing on the fly!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Lambda (Name-illaatha function)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">One-time Use Paper Spoon</div>
+                <p>Nee oru ice-cream sapidura. Appo kudukura chinna paper spoon thaan <b>Lambda</b>. Atha nee eppavum
+                    toolkit-la vachiruka matta, saputu thooki pottuduva. One-time use-ku Mattum oru function venuna,
+                    athukku periya <code class="il">def</code> panni name kudukka thevailla. Anonymous-a lambda use
+                    pannalam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Lambda function create panna enna keyword use pannanum?</p>
+                <div class="cc-code-box">
+                    add = <input type="text" class="cc-input" data-answer="lambda" style="width: 100px;"> a, b: a + b
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Map & Filter</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Processing</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>Map</b>: Oru list-la irukura ellathukum oru operation panna (e.g., Ellaa items-um double
+                        aakka).</li>
+                    <li><b>Filter</b>: List-la irukura certain items-a mattum filter panni edukka.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">nums</span> <span class="op">=</span> [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>]
+
+<span class="cm"># Map: Square all</span>
+<span class="var">sqs</span> <span class="op">=</span> <span class="nb">list</span>(<span class="fn">map</span>(<span class="kw">lambda</span> <span class="var">x</span>: <span class="var">x</span>*<span class="var">x</span>, <span class="var">nums</span>))
+
+<span class="cm"># Filter: Even numbers only</span>
+<span class="var">evens</span> <span class="op">=</span> <span class="nb">list</span>(<span class="fn">filter</span>(<span class="kw">lambda</span> <span class="var">x</span>: <span class="var">x</span> <span class="op">%</span> <span class="num">2</span> <span class="op">==</span> <span class="num">0</span>, <span class="var">nums</span>))
+
+<span class="fn">print</span>(<span class="var">sqs</span>)
+<span class="fn">print</span>(<span class="var">evens</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="18">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Lambda & Tools</h2>
+                <p>Functional magic catch pannitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="anonymous">
+                <p class="quiz-q">1. Lambda function and innoru peyar enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="permanent">Permanent function</div>
+                    <div class="quiz-opt" data-value="anonymous">Anonymous function</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Name illama use panrathala idhu <b>Anonymous
+                        function</b>.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="map">
+                <p class="quiz-q">2. List-la irukura ovvoru element mela oru function-a apply panna enna use pannanum?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="map">map()</div>
+                    <div class="quiz-opt" data-value="filter">filter()</div>
+                    <div class="quiz-opt" data-value="apply">apply()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <b>map()</b> function input list-a output list-a map
+                    pannanum applying the operation.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="boolean">
+                <p class="quiz-q">3. Filter function-kulla kudukura lambda eppovum enna return pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="number">Number</div>
+                    <div class="quiz-opt" data-value="boolean">Boolean (True/False)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Condition True-va iruntha mattum thaan element
+                    results-la varum. So <b>Boolean</b> return pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="one">
+                <p class="quiz-q">4. Lambda functions-la max-a ethana line expression ezhutha mudiyum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="one">One single line</div>
+                    <div class="quiz-opt" data-value="many">Many lines</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Lambda strictly **one-line** functions thaan. Complex
+                    logic-ku <code class="il">def</code> use pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="list">
+                <p class="quiz-q">5. map() or filter() oda result-a readable-a pakka enna type-a convert pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="str">string</div>
+                    <div class="quiz-opt" data-value="list">list()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python 3-la map/filter object-a thaan tharum.
+                    Athanaala <b>list()</b> panna thaan values-a pakka mudiyum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-19.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 19: Decorators & Generators</h3>
+                <p>🔥 Advanced Python &mdash; Wrapper functions and Memory efficiency.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 18 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

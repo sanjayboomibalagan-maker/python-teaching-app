@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11 - Modules & Packages | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 11</div>
+            <h1>Modules &amp; Packages</h1>
+            <p class="subtitle">🚀 Intermediate Level Start &mdash; Oru periya code-a chinna chinna blocks-a piri!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Enna ithu Module?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Toolkit (Ayutham Petti)</div>
+                <p>Oru carpenter kitta toolkit irukkum. Athula hammers, screwdrivers, and saws nu theri-theriya
+                    compartment irukkum. Carpenter-kku screwdriver venumna, toolkit-la screwdriver compartment-a mattum
+                    open panni edupparu. Ithu maari thaan <b>Modules</b> &mdash; python files-a toolkit maari use
+                    pannalam. Orey file-la ellathaiyum ezhuthama, functional-a pirichi vachikalaam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la oru module-a use panna enna keyword use pannanum?</p>
+                <div class="cc-code-box">
+                    <input type="text" class="cc-input" data-answer="import"> math
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Different ways to Import</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concepts</h2><span class="section-tag">Syntax</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>import module</b>: Full library-a import pannum.</li>
+                    <li><b>as</b>: Periya name-a short-a mathikka (Alias).</li>
+                    <li><b>from ... import</b>: Specific tool-a mattum edukkalam.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Method 1: Regular</span>
+<span class="kw">import</span> <span class="var">math</span>
+<span class="fn">print</span>(<span class="var">math</span>.<span class="fn">sqrt</span>(<span class="num">16</span>))
+
+<span class="cm"># Method 2: Alias (Nickname)</span>
+<span class="kw">import</span> <span class="var">datetime</span> <span class="kw">as</span> <span class="var">dt</span>
+<span class="fn">print</span>(<span class="var">dt</span>.<span class="fn">datetime</span>.<span class="fn">now</span>())
+
+<span class="cm"># Method 3: Specific tool</span>
+<span class="kw">from</span> <span class="var">random</span> <span class="kw">import</span> <span class="fn">randint</span>
+<span class="fn">print</span>(<span class="fn">randint</span>(<span class="num">1</span>, <span class="num">100</span>))</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> Personal Modules</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Custom Modules</h2><span class="section-tag">Own Code</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Nee ezhuthuna oru `.py` file-a innoru file-la import panni use pannalam. Ithu thaan main logic
+                    building-kku periya help pannum.</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">File: my_math.py</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">def</span> <span class="fn">add</span>(<span class="var">a</span>, <span class="var">b</span>):
+    <span class="kw">return</span> <span class="var">a</span> <span class="op">+</span> <span class="var">b</span></pre>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">File: main.py</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">import</span> <span class="fn">my_math</span>
+<span class="fn">print</span>(<span class="fn">my_math.add</span>(<span class="num">5</span>, <span class="num">10</span>))</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="11">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Modules & Imports</h2>
+                <p>Toolkit use panna kathukitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="import">
+                <p class="quiz-q">1. Oru module-a load panna enna keyword venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="load">load</div>
+                    <div class="quiz-opt" data-value="import">import</div>
+                    <div class="quiz-opt" data-value="using">using</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python-la libraries use panna standard-aana keyword
+                    <b>import</b>.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="as">
+                <p class="quiz-q">2. Module name-ku 'nickname' (alias) kudukka enna ezhuthanam?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="is">is</div>
+                    <div class="quiz-opt" data-value="name">name</div>
+                    <div class="quiz-opt" data-value="as">as</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">import math as m</code> &mdash;
+                    ithula <b>as</b> thaan math-ku short name fix pannum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="from">
+                <p class="quiz-q">3. Module-la irundhu specific-a oru tool-a mattum edukka enna use pannalam?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="from">from</div>
+                    <div class="quiz-opt" data-value="pick">pick</div>
+                    <div class="quiz-opt" data-value="get">get</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">from random import randint</code>
+                    maari <b>from</b> keyword use panni specific parts edukkalam.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="dot">
+                <p class="quiz-q">4. Module ulla irukura function-a call panna enna symbol use aagum (e.g., math_sqrt)?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="slash">Slash (/)</div>
+                    <div class="quiz-opt" data-value="dot">Dot (.)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">math.sqrt()</code> maari <b>dot</b>
+                    (.) operation thaan functions call panna use aagum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="py">
+                <p class="quiz-q">5. Custom module ezhuthura file-oda extension enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="txt">.txt</div>
+                    <div class="quiz-opt" data-value="py">.py</div>
+                    <div class="quiz-opt" data-value="mod">.mod</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Ellaa Python files-um <b>.py</b> extension-la thaan
+                    irukka pannanum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-12.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 12: File Handling</h3>
+                <p>Read and write data to files &mdash; permanent storage logic.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 11 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

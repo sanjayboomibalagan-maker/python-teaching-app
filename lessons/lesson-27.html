@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 27 - Data Structures &amp; Algorithms | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 27</div>
+            <h1>Data Structures (Stacks &amp; Queues)</h1>
+            <p class="subtitle">Efficiency &mdash; Million bytes of data-va memory-la epdi correct-a arrange pannanum?
+            </p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Stacks vs Queues</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Cafeteria Plates vs Bank Line</div>
+                <p><b>1. Stack:</b> Oru plate mela innooru plate adukki vacha, namma first edukkumbothu last-a vacha
+                    plate-a thaan eduupom (**LIFO - Last In First Out**).<br><br><b>2. Queue:</b> Bank line-la first
+                    yaaru nilluranga thaan first service kedaikum (**FIFO - First In First Out**). Python-la lists-a
+                    vachi idhe structures-a create panna kathukanum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">"First In First Out" behavior-ku logic peyar enna?</p>
+                <div class="cc-code-box">
+                    Pattern: <input type="text" class="cc-input" data-answer="FIFO" style="width: 80px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Implementation</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>Push</b>: Oru element-a add panna (List-la `.append()`).</li>
+                    <li><b>Pop</b>: Oru element-a remove panna (List-la `.pop()`).</li>
+                    <li><b>Peek</b>: Top element-a mattum check panna without removing.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Stack Example (LIFO)</span>
+<span class="var">stack</span> <span class="op">=</span> []
+<span class="var">stack</span>.<span class="fn">append</span>(<span class="num">10</span>) <span class="cm"># Push</span>
+<span class="var">stack</span>.<span class="fn">append</span>(<span class="num">20</span>)
+<span class="fn">print</span>(<span class="var">stack</span>.<span class="fn">pop</span>()) <span class="cm"># Pop: Output 20 (Last In)</span>
+
+<span class="cm"># Queue Example (FIFO)</span>
+<span class="kw">from</span> <span class="var">collections</span> <span class="kw">import</span> <span class="var">deque</span>
+<span class="var">queue</span> <span class="op">=</span> <span class="fn">deque</span>([<span class="num">1</span>, <span class="num">2</span>])
+<span class="var">queue</span>.<span class="fn">append</span>(<span class="num">3</span>)
+<span class="fn">print</span>(<span class="var">queue</span>.<span class="fn">popleft</span>()) <span class="cm"># Output 1 (First In)</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="27">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Efficiency Check</h2>
+                <p>Structures purinjiducha-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="LIFO">
+                <p class="quiz-q">1. Stack endha logic-la work aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="LIFO">LIFO (Last In First Out)</div>
+                    <div class="quiz-opt" data-value="FIFO">FIFO (First In First Out)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **LIFO** - Kadaisi-ya vandha object thaan first veliya
+                    pogum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="deque">
+                <p class="quiz-q">2. Efficient-ana Queue create panna endha Python class use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="list">list</div>
+                    <div class="quiz-opt" data-value="deque">deque</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **deque** (Double Ended Queue) thaan first elements-a
+                    delete panna speed-a irukkum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="pop">
+                <p class="quiz-q">3. Stack-le irundhu item-a veliya edukka endha function thevai?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="push">push</div>
+                    <div class="quiz-opt" data-value="pop">pop</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **pop()** item-a veliya eduthu memory usage update
+                    pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="plate-stack">
+                <p class="quiz-q">4. Browser-la 'Back' button press pannuna endha structure logic use aagudhu?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="plate-stack">Stack</div>
+                    <div class="quiz-opt" data-value="line-queue">Queue</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Nee visit pannuna last page thaan first back varum.
+                    So, idhu **Stack** logic.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="O(1)">
+                <p class="quiz-q">5. Oru list-la kadaisi item-a pop panna time complexity enna (Rough-a)?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="O(1)">O(1) - Constant</div>
+                    <div class="quiz-opt" data-value="O(N)">O(N) - Linear</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Kadaisi item-a mattum access panna Python-ku length
+                    theriyum so **O(1)** speed thaan.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-28.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 28: Async Programming (asyncio)</h3>
+                <p>Speed &mdash; Wait pannaame aduthu velaia paaru! Dynamic and Fast apps-ku idhu thaa root.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 27 &mdash; Data Organized</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

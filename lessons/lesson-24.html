@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 24 - Web Scraping | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 24</div>
+            <h1>Web Scraping (BeautifulSoup)</h1>
+            <p class="subtitle">Data Mining &mdash; Website pathu manual-a data-va copy pannaama automatic-a extract
+                pannu!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Manual vs Auto</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Scrap Shop (Irumu Kadai)</div>
+                <p>Oru periya kuppai medulayum (Website), unakku thevaiyana "Irumbu" (Data like Price/Name) mattum
+                    separate-a edukkanum. Ithu thaan <b>Web Scraping</b>. Manual-a notebook-la ezhuthuradhuku bathula,
+                    oru "Magnet" (BeautifulSoup) vachi automatic-a ellathaiyum collect panni oru table-a mathalam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la HTML-a parse panna use aagura famous library peyar enna?</p>
+                <div class="cc-code-box">
+                    from bs4 import <input type="text" class="cc-input" data-answer="BeautifulSoup"
+                        style="width: 150px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> How to Scrape?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Parsing</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>soup.find()</b>: Oru specific HTML tag-a (e.g., h1) kandu pudikka.</li>
+                    <li><b>soup.find_all()</b>: Ella tags-ayum (e.g., all links) edukka.</li>
+                    <li><b>.text</b>: HTML tag kulla irukkura actual content-a mattum edukka.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">from</span> <span class="var">bs4</span> <span class="kw">import</span> <span class="var">BeautifulSoup</span>
+<span class="kw">import</span> <span class="var">requests</span>
+
+<span class="var">page</span> <span class="op">=</span> <span class="var">requests</span>.<span class="fn">get</span>(<span class="st">"https://example.com"</span>)
+<span class="var">soup</span> <span class="op">=</span> <span class="fn">BeautifulSoup</span>(<span class="var">page</span>.<span class="var">content</span>, <span class="st">'html.parser'</span>)
+
+<span class="var">title</span> <span class="op">=</span> <span class="var">soup</span>.<span class="fn">find</span>(<span class="st">'h1'</span>).<span class="var">text</span>
+<span class="fn">print</span>(<span class="var">title</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="24">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Data Miner</h2>
+                <p>Scraping logic catch pannitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="find_all">
+                <p class="quiz-q">1. Oru page-la irukura 'a' (links) tags ellathaiyum list-a edukka enna call pannanum?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="find">find('a')</div>
+                    <div class="quiz-opt" data-value="find_all">find_all('a')</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **find_all** command thaan matching tags-a list
+                    formats-la tharum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="bs4">
+                <p class="quiz-q">2. BeautifulSoup entha package-kulla irukkum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="requests">requests</div>
+                    <div class="quiz-opt" data-value="bs4">bs4</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **bs4** (BeautifulSoup4) package thaan main parsing
+                    library.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="text">
+                <p class="quiz-q">3. HTML tag illame verum words mattum extract panna enna property use pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="html">.html</div>
+                    <div class="quiz-opt" data-value="text">.text</div>
+                    <div class="quiz-opt" data-value="string">.string</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **.text** thaan tags-a remove panni actual visible
+                    content-a tharum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="html.parser">
+                <p class="quiz-q">4. BeautifulSoup create panna munnadi 'parser' argument-a enna kudukkavum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="html.parser">html.parser</div>
+                    <div class="quiz-opt" data-value="text.parser">text.parser</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python-la HTML-a decode panna **html.parser**
+                    standard-a use aagum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="legal">
+                <p class="quiz-q">5. Ella website-ayum scrap panna legal-ah?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="legal">No, robots.txt check pannanum</div>
+                    <div class="quiz-opt" data-value="yes">Yes, allowed</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Website policies pathu thaan scrap pannanum.
+                    Generally, **robots.txt** file-a follow pannanum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-25.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 25: Virtual Environments (venv)</h3>
+                <p>Project Isolation &mdash; Conflict-a thavirka project-a isolate pannu!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 24 &mdash; 🔥 Advanced Miner</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

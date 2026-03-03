@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 28 - Async Programming | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 28</div>
+            <h1>Async Programming (asyncio)</h1>
+            <p class="subtitle">Concurrent Execution &mdash; Oru vela mudiya wait pannaama aduthu velaia paaru!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Async vs Sync</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Coffee Shop Multitasking (The Power of Await)</div>
+                <p>Nee oru coffee shop waiteru. Sync programming na, nee coffee machine-a on panni coffee vara varai
+                    andha machine munnadiye nipppa (**Waiting**). Async na, coffee machine on pannitu, andha gap-la
+                    innoru customertta order vaanguva (**Working**). Machine "Ding" sound kuduthona (Event), nee poi
+                    coffee eduppa. Idhu thaan <b>Async</b> logic. Network requests mudiya wait pannaama program
+                    execution-a continue pannanum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Async function-a create panna enna keyword thevai?</p>
+                <div class="cc-code-box">
+                    <input type="text" class="cc-input" data-answer="async" style="width: 80px;"> def myfunc():
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Await and Sleep</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Syntax</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>async def</b>: Definition of a coroutine (non-blocking function).</li>
+                    <li><b>await</b>: Oru result varra varai execution-a pause panna (without blocking others).</li>
+                    <li><b>run()</b>: Main async entry point-a trigger panna.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">import</span> <span class="var">asyncio</span>
+
+<span class="kw">async def</span> <span class="fn">make_coffee</span>():
+    <span class="fn">print</span>(<span class="st">"Starting coffee..."</span>)
+    <span class="kw">await</span> <span class="var">asyncio</span>.<span class="fn">sleep</span>(<span class="num">2</span>) <span class="cm"># Non-blocking wait</span>
+    <span class="fn">print</span>(<span class="st">"Coffee ready!"</span>)
+
+<span class="var">asyncio</span>.<span class="fn">run</span>(<span class="fn">make_coffee</span>())</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="28">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Non-blocking Python</h2>
+                <p>Speed logic catch pannitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="await">
+                <p class="quiz-q">1. Oru async function kulla vera oru async task mudiya wait panna enna keyword
+                    pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="wait">wait</div>
+                    <div class="quiz-opt" data-value="await">await</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **await** keyword thaan coroutine context-a release
+                    pannanum so others can run.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="coroutine">
+                <p class="quiz-q">2. `async def` vachi define pannura function-a enna-nu soluuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="coroutine">Coroutine</div>
+                    <div class="quiz-opt" data-value="generator">Generator</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Async functions-a **Coroutines** nu solluvom.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="sleep">
+                <p class="quiz-q">3. Async-la program block aagaama 'wait' panna endha function use aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="delay">time.delay()</div>
+                    <div class="quiz-opt" data-value="sleep">asyncio.sleep()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **asyncio.sleep()** thaan non-blocking sleep-a proivde
+                    pannanum. `time.sleep` whole program-a block pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="run">
+                <p class="quiz-q">4. Top-level async task-a start panna enna call pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="start">asyncio.start()</div>
+                    <div class="quiz-opt" data-value="run">asyncio.run()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **asyncio.run()** thaan event loop-a start panni
+                    coroutine run pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="True">
+                <p class="quiz-q">5. Async programming high network-usage apps-ku (like Chat / Crawlers) romba
+                    useful-ah?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="True">Yes, romba useful</div>
+                    <div class="quiz-opt" data-value="False">No, support aagaathu</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> I/O bound tasks-ku (Internet/File) **Async** is
+                    extremely fast because CPU free-a irukkum while waiting for data.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-29.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 29: Algorithms (Sorting/Searching)</h3>
+                <p>Problem Solving &mdash; Million points of data-la fast-a search and sort panna logic-a kathuko!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 28 &mdash; Async Speed</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

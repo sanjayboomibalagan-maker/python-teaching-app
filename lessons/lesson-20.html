@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 20 - Multithreading & Multiprocessing | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 20</div>
+            <h1>Multithreading &amp; Multiprocessing</h1>
+            <p class="subtitle">Parallel Programming &mdash; Orey nerathula neraya vela seiya vai! Time-a save pannu.
+            </p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Multithreading vs Multiprocessing</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Hotel Kitchen (Samayal Room)</div>
+                <p>Oru hotel-la <b>Multithreading</b>-nu sonna, oru chef-ae orey nerathula tea-um pottu, side-la
+                    vadai-um fry panra maari. Ithu "Lightweight" tasks-ku (like waiting for internet download) semma
+                    speed-a irukkum.</p>
+                <p><b>Multiprocessing</b>-nu sonna, 4 periya chefs-a oru periya function-ku (Kalyana saapadu) hire panra
+                    maari. Ovvoru chef-kum oru "Separate Stove" (CPU Core) irukkum. Ithu romba "Heavy" tasks-ku (like
+                    video editing or heavy math) use aagum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Multithreading use panna endha module-a import pannanum?</p>
+                <div class="cc-code-box">
+                    import <input type="text" class="cc-input" data-answer="threading" style="width: 120px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> How it works?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Concurrency</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>Thread</b>: Oru process-kulla irukura chinna stream of execution. Multiple threads same
+                        memory space-a share pannum.</li>
+                    <li><b>Process</b>: Engine maari. Independent memory block. CPU-la romba cores iruntha
+                        multiprocessing semma speed-a irukkum.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python (Threading)</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">import</span> <span class="var">threading</span>
+<span class="kw">import</span> <span class="var">time</span>
+
+<span class="kw">def</span> <span class="fn">print_numbers</span>():
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="nb">range</span>(<span class="num">5</span>):
+        <span class="fn">print</span>(<span class="var">i</span>)
+        <span class="var">time</span>.<span class="fn">sleep</span>(<span class="num">1</span>)
+
+<span class="cm"># Creating thread</span>
+<span class="var">t1</span> <span class="op">=</span> <span class="var">threading</span>.<span class="fn">Thread</span>(<span class="var">target</span><span class="op">=</span><span class="var">print_numbers</span>)
+<span class="var">t1</span>.<span class="fn">start</span>()
+<span class="var">t1</span>.<span class="fn">join</span>() <span class="cm"># Wait for it to finish</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="20">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Parallel Power</h2>
+                <p>Speed-a kathukitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="threading">
+                <p class="quiz-q">1. Net-la irundhu file download aakura appo UI lag aagame irukka enna use pannanum?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="loop">Simple Loop</div>
+                    <div class="quiz-opt" data-value="threading">Multithreading</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Waiting tasks (I/O Bound) tasks-ku **Multithreading**
+                    thaan best choice.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="CPUs">
+                <p class="quiz-q">2. Multiprocessing use panna hardware-la enna extra-va theva padum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="RAM">More RAM</div>
+                    <div class="quiz-opt" data-value="CPUs">Multiple CPU Cores</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Multiprocessing parallel-a run aaga computer-la
+                    multiple cores (engines) irukkanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="join">
+                <p class="quiz-q">3. Oru thread mudiyura varaikkum main program-a wait panna vaikka enna method call
+                    pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="stop">t1.stop()</div>
+                    <div class="quiz-opt" data-value="join">t1.join()</div>
+                    <div class="quiz-opt" data-value="wait">t1.wait()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **join()** method thaan control-a hold panni thread
+                    finish aaga wait pannum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="Global Interpreter Lock">
+                <p class="quiz-q">4. Python-la 'GIL' na enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="General Interpreter Loop">General Interpreter Loop</div>
+                    <div class="quiz-opt" data-value="Global Interpreter Lock">Global Interpreter Lock</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **GIL** thaan Python-la orey nerathula multiple
+                    threads CPU cores use panratha restrict pannum (Cpython logic).</div>
+            </div>
+
+            <div class="quiz-item" data-answer="multiprocessing">
+                <p class="quiz-q">5. Real parallel processing (true CPU parallelism) thevanna enna use pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="threading">Threading</div>
+                    <div class="quiz-opt" data-value="multiprocessing">Multiprocessing</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Multiprocessing thaan different cores use panni
+                    unmaiyana parallel speed kudukkum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-21.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 21: Regular Expressions (Regex)</h3>
+                <p>Pattern Matching &mdash; Search and find data using complex patterns.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 20 &mdash; 🚀 Intermediate Master!</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

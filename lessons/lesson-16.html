@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 16 - Encapsulation & Abstraction | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb ="></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 16</div>
+            <h1>Encapsulation &amp; Abstraction</h1>
+            <p class="subtitle">OOPs Final &mdash; Data-va lock pannu, complexity-a hide pannu!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Encapsulation (Capsule maari moodi vai)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Medicine Capsule</div>
+                <p>Nee oru capsule maathirai sapidura. Athukulla different chemical powders irukkum, aana veliya oru
+                    soft shell-aala cover aagi irukkum. Ithu thaan <b>Encapsulation</b>. Code-la data-vum functions-um
+                    orey module-kulla bund-aagi irukkum. Un variables-a veliya yarum easy-a direct-a matha mudiyatha
+                    maari double underscore (__) vachi hide pannuvom.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la oru variable-a "Private" (hidden) aakka munnadi enna symbol ezhuthanam?</p>
+                <div class="cc-code-box">
+                    self.<input type="text" class="cc-input" data-answer="__" style="width: 40px;">balance = 1000
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Abstraction (Thevaiyanatha mattum kaattu)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">ATM Machine</div>
+                <p>Nee ATM center-ku pora. Screen-la "Withdraw" nu irukkum, atha amukkura. Kaasu varuthu. Machine kulla
+                    cash counting mechanism epdi irukku, server communication epdi pogudhunnu unakku theriya venam.
+                    Unakku Withdraw panna theriya thaan venum. Ithu thaan <b>Abstraction</b> &mdash; unnecessary
+                    complexity-a hide panni main functionality-a mattum kudukurathu.</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">from</span> <span class="var">abc</span> <span class="kw">import</span> <span class="var">ABC</span>, <span class="var">abstractmethod</span>
+
+<span class="kw">class</span> <span class="fn">Shape</span>(<span class="var">ABC</span>):
+    <span class="kw">@abstractmethod</span>
+    <span class="kw">def</span> <span class="fn">area</span>(<span class="var">self</span>): <span class="kw">pass</span>
+
+<span class="kw">class</span> <span class="fn">Square</span>(<span class="var">Shape</span>):
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>, <span class="var">s</span>): <span class="var">self</span>.<span class="var">s</span> <span class="op">=</span> <span class="var">s</span>
+    <span class="kw">def</span> <span class="fn">area</span>(<span class="var">self</span>): <span class="kw">return</span> <span class="var">self</span>.<span class="var">s</span> <span class="op">*</span> <span class="var">self</span>.<span class="var">s</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="16">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Security & Complexity</h2>
+                <p>OOPs architecture master panniytiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="private">
+                <p class="quiz-q">1. '__' (Double underscore) vachi ezhutha variable-ku enna access level irukkum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="public">Public (Everyone)</div>
+                    <div class="quiz-opt" data-value="private">Private (Only inside class)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Triple-underscore illai, <b>Double underscore</b>
+                    thaan variables-a class ulla mattum use panna restrict pannum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="encapsulation">
+                <p class="quiz-q">2. Data and Functions-a orey bundle-a wrap panratu enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="encapsulation">Encapsulation</div>
+                    <div class="quiz-opt" data-value="abstraction">Abstraction</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Wrapping/Binding operation-kku **Encapsulation** nu
+                    peyar.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="abc">
+                <p class="quiz-q">3. Abstraction use panna endha module-a import pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="math">math</div>
+                    <div class="quiz-opt" data-value="abc">abc (Abstract Base Classes)</div>
+                    <div class="quiz-opt" data-value="sys">sys</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python library-la irukkura <b>abc</b> module thaan
+                    abstraction-kku base.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="abstract_method">
+                <p class="quiz-q">4. Endha method-ku logic ezhuthama verum declaration mattum irukkumo athuku enna peyar?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="regular">Regular method</div>
+                    <div class="quiz-opt" data-value="abstract_method">Abstract method</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Abstract method blueprint-la irukkum, Child class
+                    thaan actual logic ezhuthanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="Security">
+                <p class="quiz-q">5. Real-life usage-la Encapsulation main goal enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="Speed">Processing Speed</div>
+                    <div class="quiz-opt" data-value="Security">Data Security & Integrity</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Data-va yarum easy-a interfere pannaama **Security**
+                    kudukura thaan main reason.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-17.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 17: List Comprehension</h3>
+                <p>Python-oda "Magic" syntax &mdash; 5 lines of code-a single line-la mudiyu!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 16 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

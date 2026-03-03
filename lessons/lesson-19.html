@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 19 - Decorators & Generators | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 19</div>
+            <h1>Decorators &amp; Generators</h1>
+            <p class="subtitle">🔥 Advanced Features &mdash; Functions-uda special behavior and efficient data streaming!
+            </p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Decorators (@Wrapper)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Phone Case (Decoration)</div>
+                <p>Nee oru mobile phone vachirukka. Phone call panna use aagum. Ippo athula oru shock-proof "Case"
+                    podura. Phone-oda original function (Calling) maarala, aana extra safety vandhirukku. Ithu thaan
+                    <b>Decorator</b>. Oru existing function-a modify pannaama, athuku mela extra features (Logging,
+                    Authentication) add panna use aagum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la decorator apply panna enna symbol use pannanum?</p>
+                <div class="cc-code-box">
+                    <input type="text" class="cc-input" data-answer="@" style="width: 40px;">my_decorator<br>
+                    def my_function(): pass
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Generators (Yield magic)</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Water Tap vs Water Tank</div>
+                <p>Nee 1000 liters tanni oru tank-la nirappi vachikuta memory romba edukkun. Ithu <b>List</b> maari.
+                    Aana <b>Generator</b> thaan water tap maari. Unakku eppo tanni venumo, appo tap thirandha onnu onna
+                    vandhute irukkum. Ellathaiyum orey nerathula nirapi vachukaama, thevaiyappo matum create panni
+                    'yield' pannum. Memory romba save aagum!</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Generator function</span>
+<span class="kw">def</span> <span class="fn">my_generator</span>():
+    <span class="kw">yield</span> <span class="num">1</span>
+    <span class="kw">yield</span> <span class="num">2</span>
+    <span class="kw">yield</span> <span class="num">3</span>
+
+<span class="var">gen</span> <span class="op">=</span> <span class="fn">my_generator</span>()
+<span class="fn">print</span>(<span class="nb">next</span>(<span class="var">gen</span>)) <span class="cm"># Output: 1</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="19">
+            <div class="quiz-header">
+                <h2>Quick Quiz – 🔥 Advanced Concepts</h2>
+                <p>Decorators and Yield logic catch pannitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="yield">
+                <p class="quiz-q">1. Generator-la return-ku bathula enna keyword use pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="return">return</div>
+                    <div class="quiz-opt" data-value="yield">yield</div>
+                    <div class="quiz-opt" data-value="give">give</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <b>yield</b> keyword thaan function execution state-a
+                    save panni values-a one-by-one tarrum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="memory">
+                <p class="quiz-q">2. Generators-oda main advantage enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="speed">Run speed</div>
+                    <div class="quiz-opt" data-value="memory">Memory efficiency</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Massive data processing panrappo pathi pathiya
+                    generator create panrathala memory useage romba kammi.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="wrapper">
+                <p class="quiz-q">3. Decorator-ku ulla ezhuthura temporary function-ku enna peyar?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="inner">inner_func</div>
+                    <div class="quiz-opt" data-value="wrapper">wrapper</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Usually <b>wrapper</b> nu per vappom, athan main
+                    function-a wrap panni extra logic add pannum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="next">
+                <p class="quiz-q">4. Generator-la irundhu adutha value-a edukka enna function use aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="next">next()</div>
+                    <div class="quiz-opt" data-value="follow">follow()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">next(gen)</code> step-by-step-a
+                    output kudukkum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="True">
+                <p class="quiz-q">5. Oru function-ku mela neraya decorators mela mela (@dec1, @dec2) apply panna
+                    mudiyuma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="True">Mudiyum (Chaining)</div>
+                    <div class="quiz-opt" data-value="False">Mudiyathu</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Ithu **Chaining Decorators** nu solluvom. Multiple
+                    wrappers combine panna mudiyum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-20.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 20: Multithreading & Multiprocessing</h3>
+                <p>Parallel Programming &mdash; Orey nerathula neraya vela seiya vai!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 19 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

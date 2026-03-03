@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 04 - Conditional Statements | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 04</div>
+            <h1>Conditional Statements</h1>
+            <p class="subtitle">if, elif, else &mdash; program-la logic and decisions edukka kaththukko</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> if, elif, else Basics</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Bus Ticket Fare Decision</div>
+                    <p>Bus-la conductor kitta Ticket keka pora. <strong>IF</strong> nee chinna paiyan-na (child), half
+                        ticket. <strong>ELIF</strong> nee senior citizen-na, free/concession. <strong>ELSE</strong>
+                        (ithu
+                        ethuvume illana), full ticket. Condition-a poruthu operation maarum &mdash; ithu thaan Python-la
+                        conditional statements.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <img src="../assets/bus.png" alt="Bus Ticket Decision Visual">
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Python-la syntax romba simple. Important-a <b>colon (:)</b> and <b>Indentation (spaces)</b>
+                    gavanikanum.</p>
+            </div>
+
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="kw">if</span> <span class="var">mark</span> <span
+                        class="op">>=</span> <span class="num">35</span><span class="op">:</span></div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">Keyword</span>
+                        <span class="part-val">if</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Condition</span>
+                        <span class="part-val">mark >= 35</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Separator</span>
+                        <span class="part-val">: (Colon)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: The Indentation Rule</h4>
+                <p>Python-la matha languages maari curly brackets <code class="il">{}</code> illa. Athukku pathila
+                    block-a identify panna <b>4 spaces</b> (Indentation) use pannuvom. Colon potta pothum, next line
+                    automatic-a thalli varum. Ithai mathuna error varum!</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon code">></div>
+                <div>
+                    <h2>Worked Example</h2><span class="section-tag">Code</span>
+                </div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">age</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Enter your age: "</span>))
+
+<span class="kw">if</span> <span class="var">age</span> <span class="op">>=</span> <span class="num">18</span>:
+    <span class="fn">print</span>(<span class="st">"Nee vote poda thaguthi aanavan (Eligible)!"</span>)
+<span class="kw">elif</span> <span class="var">age</span> <span class="op">>=</span> <span class="num">13</span>:
+    <span class="fn">print</span>(<span class="st">"Nee innum teenager thaan."</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Nee chinna kozhanthai."</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Logical Operators in Conditions</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Multiple Conditions</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Orey line-la rendu moonu conditions check panna <b>and, or, not</b> use pannuvom.</p>
+            </div>
+
+            <table class="quick-ref-table">
+                <thead>
+                    <tr>
+                        <th>Logic</th>
+                        <th>Condition</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>and</code></td>
+                        <td>A and B</td>
+                        <td>Rendum True-va irukanum</td>
+                    </tr>
+                    <tr>
+                        <td><code>or</code></td>
+                        <td>A or B</td>
+                        <td>Ethavathu onnu True-va irundha pothum</td>
+                    </tr>
+                    <tr>
+                        <td><code>not</code></td>
+                        <td>not A</td>
+                        <td>Reverse pannum (True becomes False)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">mark</span> <span class="op">=</span> <span class="num">85</span>
+<span class="var">attendance</span> <span class="op">=</span> <span class="num">90</span>
+
+<span class="kw">if</span> <span class="var">mark</span> <span class="op">></span> <span class="num">80</span> <span class="kw">and</span> <span class="var">attendance</span> <span class="op">></span> <span class="num">75</span>:
+    <span class="fn">print</span>(<span class="st">"Nee Distinction-la pass!"</span>)
+
+<span class="kw">if</span> <span class="var">mark</span> <span class="op"><</span> <span class="num">35</span> <span class="kw">or</span> <span class="var">attendance</span> <span class="op"><</span> <span class="num">50</span>:
+    <span class="fn">print</span>(<span class="st">"Nee fail, inimey ozhunga padi!"</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> Nested If</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Innoru Condition Ulla Innoru Condition</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">ATM Transaction Example</div>
+                <p><strong>IF</strong> nee card potta inside -> <strong>IF</strong> pin correct -> Cash withdraw
+                    pannalaam. Pin thappa iruntha Card block aagum. Inga condition-ulla innoru condition irukkuru thaan
+                    <b>Nested If</b>.
+                </p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">has_card</span> <span class="op">=</span> <span class="kb">True</span>
+<span class="var">pin</span> <span class="op">=</span> <span class="num">1234</span>
+
+<span class="kw">if</span> <span class="var">has_card</span>:
+    <span class="kw">if</span> <span class="var">pin</span> <span class="op">==</span> <span class="num">1234</span>:
+        <span class="fn">print</span>(<span class="st">"Login Success! Welcome!"</span>)
+    <span class="kw">else</span>:
+        <span class="fn">print</span>(<span class="st">"Wrong PIN!"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Pleaase insert your card."</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Mixing "=" and "=="</div>
+                <code class="wrong">if age = 18:  # Error: Assign panra, compare pannala</code>
+                <code class="right">if age == 18: # Correct: Check panra</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Indentation Error (Tab/Space)</div>
+                <code class="wrong">if True:
+print("Hello") # Spaces illa</code>
+                <code class="right">if True:
+    print("Hello") # 4 spaces venum</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Marakkura Colon (:)</div>
+                <code class="wrong">if a > b  # Colon enga?</code>
+                <code class="right">if a > b: # Correct</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon exercise">?</div>
+                <div>
+                    <h2>Practice Exercises</h2><span class="section-tag">Try yourself</span>
+                </div>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q1: Oru number-a user kitta irunthu vaangi, athu Even-a illa Odd-a nu print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">num</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Number: "</span>))
+<span class="kw">if</span> <span class="var">num</span> <span class="op">%</span> <span class="num">2</span> <span class="op">==</span> <span class="num">0</span>:
+    <span class="fn">print</span>(<span class="st">"Even"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Odd"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q2: User kitta irunthu mark vaangi (0-100), mark >= 35 na "Pass", illana "Fail" nu print
+                    pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">m</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Mark: "</span>))
+<span class="kw">if</span> <span class="var">m</span> <span class="op">>=</span> <span class="num">35</span>: <span class="fn">print</span>(<span class="st">"Pass"</span>)
+<span class="kw">else</span>: <span class="fn">print</span>(<span class="st">"Fail"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q3: Rendu number vaangi, ethu perusu nu kandupidi (Largest of two).</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">a</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"A: "</span>))
+<span class="var">b</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"B: "</span>))
+<span class="kw">if</span> <span class="var">a</span> <span class="op">></span> <span class="var">b</span>:
+    <span class="fn">print</span>(<span class="st">"A is greater"</span>)
+<span class="kw">elif</span> <span class="var">b</span> <span class="op">></span> <span class="var">a</span>:
+    <span class="fn">print</span>(<span class="st">"B is greater"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Both are equal"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q4: Oru year vaangi athu Leap Year-a illaya nu kandupidi.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">y</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Year: "</span>))
+<span class="kw">if</span> (<span class="var">y</span> <span class="op">%</span> <span class="num">4</span> <span class="op">==</span> <span class="num">0</span> <span class="kw">and</span> <span class="var">y</span> <span class="op">%</span> <span class="num">100</span> <span class="op">!=</span> <span class="num">0</span>) <span class="kw">or</span> <span class="var">y</span> <span class="op">%</span> <span class="num">400</span> <span class="op">==</span> <span class="num">0</span>:
+    <span class="fn">print</span>(<span class="st">"Leap Year"</span>)
+<span class="kw">else</span>:
+    <span class="fn">print</span>(<span class="st">"Not a Leap Year"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag real">Real-Life Problem</span>
+                <p class="ex-q">Q5: Grading System: 90+ na "A", 80-89 na "B", 70-79 na "C", 35-69 na "D", 35-kku kammi
+                    na "F" grade assign pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">m</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Mark: "</span>))
+<span class="kw">if</span> <span class="var">m</span> <span class="op">>=</span> <span class="num">90</span>: <span class="fn">print</span>(<span class="st">"Grade A"</span>)
+<span class="kw">elif</span> <span class="var">m</span> <span class="op">>=</span> <span class="num">80</span>: <span class="fn">print</span>(<span class="st">"Grade B"</span>)
+<span class="kw">elif</span> <span class="var">m</span> <span class="op">>=</span> <span class="num">70</span>: <span class="fn">print</span>(<span class="st">"Grade C"</span>)
+<span class="kw">elif</span> <span class="var">m</span> <span class="op">>=</span> <span class="num">35</span>: <span class="fn">print</span>(<span class="st">"Grade D"</span>)
+<span class="kw">else</span>: <span class="fn">print</span>(<span class="st">"Grade F"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="04">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Condition-a check pannu!</h2>
+                <p>Lesson purinjiduchanu check panna intha quiz-a try pannu.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="colon">
+                <p class="quiz-q">1. Python-la 'if' condition mudincha apparam enna symbol poda num?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="semicolon">; (Semicolon)</div>
+                    <div class="quiz-opt" data-value="colon">: (Colon)</div>
+                    <div class="quiz-opt" data-value="comma">, (Comma)</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="elif">
+                <p class="quiz-q">2. "Else If"-kku Python-la short-form enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="elseif">elseif</div>
+                    <div class="quiz-opt" data-value="else_if">else if</div>
+                    <div class="quiz-opt" data-value="elif">elif</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="indentation">
+                <p class="quiz-q">3. If block ulla irukura code-kku mukkiyama enna venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="brackets">{} Brackets</div>
+                    <div class="quiz-opt" data-value="indentation">Indentation (Spaces)</div>
+                    <div class="quiz-opt" data-value="quotes">Quotes</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="and">
+                <p class="quiz-q">4. Multiple conditions check panni, ellaamey true-va irundha mattum block execute aaga
+                    enna venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="or">or</div>
+                    <div class="quiz-opt" data-value="and">and</div>
+                    <div class="quiz-opt" data-value="maybe">maybe</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="nested">
+                <p class="quiz-q">5. Oru 'if' condition ulla innoru 'if' ezhuthuntha, adhukku enna peyar?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="double">Double If</div>
+                    <div class="quiz-opt" data-value="nested">Nested If</div>
+                    <div class="quiz-opt" data-value="inside">Inside If</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-05.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 05: Loops &mdash; for & while</h3>
+                <p>Repetition, range(), loop control &mdash; break, continue, pass.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 04</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

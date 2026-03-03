@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 26 - Testing (unittest) | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 26</div>
+            <h1>Software Testing (unittest)</h1>
+            <p class="subtitle">Bug-free Code &mdash; Code-a deploy panna munnadiye ella logic-um correct-anu verify
+                pannu.</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Why Test?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">ISI Mark / Food Taster (Safety First)</div>
+                <p>Nee oru periya function-ku saapaadu pandra. Saapaadu ellarukum parimarura munnadi, oru plate-la
+                    konjama eduthu taste panni papom (Testing). Salt/Spice ellam correct-a irukka-nu double check
+                    pannina thaa function success aagum. Ithu thaan <b>Unit Testing</b>. Direct-a client-ku code-a
+                    kudukkaama, small tests vachi code and logic-a confirm pannanum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-oda built-in testing framework peyar enna?</p>
+                <div class="cc-code-box">
+                    import <input type="text" class="cc-input" data-answer="unittest" style="width: 100px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Assertions Logic</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Verification</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>TestCase</b>: Oru group of related tests-kulla irukara class.</li>
+                    <li><b>assertEqual</b>: (Expected Value == Result) nu check panna.</li>
+                    <li><b>assertTrue</b>: Oru condition True-a irukannu check panna.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">import</span> <span class="var">unittest</span>
+
+<span class="kw">def</span> <span class="fn">add</span>(<span class="var">a</span>, <span class="var">b</span>): <span class="kw">return</span> <span class="var">a</span> <span class="op">+</span> <span class="var">b</span>
+
+<span class="kw">class</span> <span class="var">MyTest</span>(<span class="var">unittest</span>.<span class="var">TestCase</span>):
+    <span class="kw">def</span> <span class="fn">test_add</span>(<span class="var">self</span>):
+        <span class="var">self</span>.<span class="fn">assertEqual</span>(<span class="fn">add</span>(<span class="num">2</span>, <span class="num">3</span>), <span class="num">5</span>)
+
+<span class="kw">if</span> <span class="var">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:
+    <span class="var">unittest</span>.<span class="fn">main</span>()</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="26">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Testing Power</h2>
+                <p>Quality check logic purinjiducha-nu papom!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="assertEqual">
+                <p class="quiz-q">1. Output andha value-ku equal-a irukka-nu check panna endha method use pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="verifyValue">verifyValue()</div>
+                    <div class="quiz-opt" data-value="assertEqual">assertEqual()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **assertEqual(a, b)** rendum same-anu check panni fail
+                    signal tharum if they differ.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="TestCase">
+                <p class="quiz-q">2. Unittest-la classes create panna endha base class-a inherit pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="TestCase">unittest.TestCase</div>
+                    <div class="quiz-opt" data-value="BaseTest">unittest.BaseTest</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **TestCase** thaan testing engine-oda heart.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="test_">
+                <p class="quiz-q">3. Unittest function names ethula start aaganum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="test_">test_</div>
+                    <div class="quiz-opt" data-value="check_">check_</div>
+                    <div class="quiz-opt" data-value="verify_">verify_</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Unittest automatically **test_** nu start aagura
+                    functions-a mattum thaan run pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="main">
+                <p class="quiz-q">4. Command line-la irundhu tests-a trigger panna enna call pannanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="run">unittest.run()</div>
+                    <div class="quiz-opt" data-value="main">unittest.main()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **unittest.main()** default-a command line trigger-a
+                    handle pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="True">
+                <p class="quiz-q">5. Oru test case-la vera logic check panna munnadi fail aayita, mitha tests run
+                    aaguma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="True">Yes, isolated-a run aagum</div>
+                    <div class="quiz-opt" data-value="False">No, stop aayidum</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Oro test case-um **Isolated**. Onnu fail aanaalum
+                    mathathaiyum verify pannanum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-27.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 27: Data Structures (Lists, Stacks)</h3>
+                <p>Efficiency &mdash; Million bytes of data-va efficient-a handle panna kaththuko!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 26 &mdash; Quality Assured</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

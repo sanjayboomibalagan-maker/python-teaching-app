@@ -39,10 +39,16 @@
                 </div>
             </div>
             <div class="story-card">
-                <div class="story-title">Name board-la ezhuthurathu maari</div>
-                <p>Kadai-la name board irukkum: <strong>"Murugan Mess"</strong>. Antha text-la nee letters mathiram
-                    edukkalaam, reverse pannalaam, capital-la maathalam. Python-la string-um ithe maari &mdash; text-a
-                    store panni, manipulate pannalam.</p>
+                <div>
+                    <div class="story-title">Name board-la ezhuthurathu maari</div>
+                    <p>Kadai-la name board irukkum: <strong>"Murugan Mess"</strong>. Antha text-la nee letters mattum
+                        edukkalaam, reverse pannalaam, capital-la maathalam. Python-la string-um ithe maari &mdash;
+                        text-a
+                        store panni, manipulate pannalam.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <img src="../assets/nameboard.png" alt="Shop Name Board Visual">
+                </div>
             </div>
         </section>
 
@@ -59,11 +65,14 @@
                     <li>Single quotes: <code class="il">'Hello'</code></li>
                     <li>Double quotes: <code class="il">"Hello"</code></li>
                     <li>Triple quotes (multiline): <code class="il">'''Hello World'''</code></li>
-                    <li>Strings are <b>immutable</b> &mdash; create pannina aprom individual characters maatha
-                        mudiyaathu</li>
-                    <li>Strings are <b>indexed</b> &mdash; each character-kku oru position number irukkum (0 la start)
-                    </li>
                 </ul>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: Immutability</h4>
+                <p>Strings are <b>immutable</b>. Ithu rumba simple concept thaan &mdash; oru thadava string create
+                    pannitta, athula irukkura elements-a change panna mudiyathu. Change pannanum na puthu string thaan
+                    create pannanum!</p>
             </div>
         </section>
 
@@ -74,6 +83,26 @@
                     <h2>Worked Example</h2><span class="section-tag">Code</span>
                 </div>
             </div>
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="var">name</span><span class="op">[</span><span
+                        class="num">0</span><span class="op">:</span><span class="num">3</span><span class="op">]</span>
+                </div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">String / Var</span>
+                        <span class="part-val">name</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Start index (Include)</span>
+                        <span class="part-val">0</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">End index (Exclude)</span>
+                        <span class="part-val">3</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="code-wrap">
                 <div class="code-head"><span class="lang">Python</span>
                     <div class="dots"><span></span><span></span><span></span></div>
@@ -82,8 +111,7 @@
                     <pre><span class="var">name</span> <span class="op">=</span> <span class="st">"Chennai"</span>
 <span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>])      <span class="cm"># C (first character)</span>
 <span class="fn">print</span>(<span class="var">name</span>[-<span class="num">1</span>])     <span class="cm"># i (last character)</span>
-<span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>:<span class="num">3</span>])   <span class="cm"># Che (slicing)</span>
-<span class="fn">print</span>(<span class="nb">len</span>(<span class="var">name</span>))    <span class="cm"># 7 (length)</span></pre>
+<span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>:<span class="num">3</span>])   <span class="cm"># Che (slicing)</span></pre>
                 </div>
             </div>
         </section>
@@ -97,17 +125,12 @@
                     <h2>Important Methods</h2><span class="section-tag">Understanding</span>
                 </div>
             </div>
-            <div class="concept-card">
-                <ul class="concept-list">
-                    <li><b>.upper()</b> &mdash; UPPERCASE aakkum</li>
-                    <li><b>.lower()</b> &mdash; lowercase aakkum</li>
-                    <li><b>.strip()</b> &mdash; leading/trailing spaces remove pannum</li>
-                    <li><b>.replace(old, new)</b> &mdash; text replace pannum</li>
-                    <li><b>.split(sep)</b> &mdash; string-a list-a maaththum</li>
-                    <li><b>.join(list)</b> &mdash; list-a string-a join pannum</li>
-                    <li><b>.find(sub)</b> &mdash; substring index return pannum</li>
-                    <li><b>.count(sub)</b> &mdash; sub evvalavu thadava irukkunu count pannum</li>
-                </ul>
+            <div class="cheat-sheet-banner">
+                <div class="cs-item"><span class="cs-label">Upper</span><code>.upper()</code></div>
+                <div class="cs-item"><span class="cs-label">Lower</span><code>.lower()</code></div>
+                <div class="cs-item"><span class="cs-label">Strip</span><code>.strip()</code></div>
+                <div class="cs-item"><span class="cs-label">Split</span><code>.split()</code></div>
+                <div class="cs-item"><span class="cs-label">Replace</span><code>.replace()</code></div>
             </div>
             <div class="code-wrap">
                 <div class="code-head"><span class="lang">Python</span>
@@ -143,6 +166,13 @@
                 <p>Invitation card template irukkum: "We invite <strong>_____</strong> to the wedding." Blank-la name
                     fill pannuva. f-string-um athe thaan &mdash; template-la variable values fill pannum.</p>
             </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: f-string Magic</h4>
+                <p>Quotes-kku munnadi oru <code class="il">f</code> pottom na, string ulla curly brackets <code
+                        class="il">{}</code> use panni endha variable or expression-a venum naalum direct-a insert
+                    pannalaam. Ithu rumba neat and clean approach!</p>
+            </div>
         </section>
         <section class="lesson-section">
             <div class="section-header">
@@ -161,7 +191,7 @@
 <span class="var">city</span> <span class="op">=</span> <span class="st">"Chennai"</span>
 
 <span class="cm"># f-string: f"..." ulle {variable} podu</span>
-<span class="fn">print</span>(<span class="st">f"Peyar: {name}, Vayasu: {age}, Ooru: {city}"</span>)
+<span class="fn">print</span>(<span class="st">f"peyar: {name}, vayasu: {age}, ooru: {city}"</span>)
 <span class="fn">print</span>(<span class="st">f"Next year age: {age + 1}"</span>)
 <span class="fn">print</span>(<span class="st">f"Name uppercase: {name.upper()}"</span>)</pre>
                 </div>
@@ -169,7 +199,7 @@
             <div class="out-wrap">
                 <div class="out-head"><span>Output</span></div>
                 <div class="out-body">
-                    <pre>Peyar: Sanjay, Vayasu: 21, Ooru: Chennai
+                    <pre>peyar: Sanjay, vayasu: 21, ooru: Chennai
 Next year age: 22
 Name uppercase: SANJAY</pre>
                 </div>
@@ -302,6 +332,64 @@ s[0] = "J"  # TypeError</code>
             </div>
         </section>
 
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="03">
+            <div class="quiz-header">
+                <h2>Quick Quiz – String Mastery Check!</h2>
+                <p>Text handling concepts clear-a irukkanu check pannalam.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="fstring">
+                <p class="quiz-q">1. String ulla variable values insert panna ethu easy way?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="concat">String Concatenation (+)</div>
+                    <div class="quiz-opt" data-value="fstring">f-strings</div>
+                    <div class="quiz-opt" data-value="quotes">Quotes</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="upper">
+                <p class="quiz-q">2. Full text-a Capital letters (UPPERCASE) aakka enna method venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="capital">.capital()</div>
+                    <div class="quiz-opt" data-value="upper">.upper()</div>
+                    <div class="quiz-opt" data-value="max">.max()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="strip">
+                <p class="quiz-q">3. String-kku munnadiyum pinnadiyum irukkura extra spaces-a remove panna enna method
+                    venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="clear">.clear()</div>
+                    <div class="quiz-opt" data-value="strip">.strip()</div>
+                    <div class="quiz-opt" data-value="cut">.cut()</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="negative">
+                <p class="quiz-q">4. String-la last character-a access panna enna index use pannalaam?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="last">L</div>
+                    <div class="quiz-opt" data-value="zero">0</div>
+                    <div class="quiz-opt" data-value="negative">-1</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="len">
+                <p class="quiz-q">5. Oru string-la evvalavu characters irukkunu check panna enna function use pannuvom?
+                </p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="size">size()</div>
+                    <div class="quiz-opt" data-value="count">count()</div>
+                    <div class="quiz-opt" data-value="len">len()</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
         <div class="next-lesson"><a href="lesson-04.html">
                 <div class="nl-label">Next Lesson</div>
                 <h3>Lesson 04: Conditional Statements</h3>
@@ -312,6 +400,7 @@ s[0] = "J"  # TypeError</code>
             <p>Python Mastery &mdash; Lesson 03</p>
         </footer>
     </div>
+    <script src="../quiz.js"></script>
 </body>
 
 </html>

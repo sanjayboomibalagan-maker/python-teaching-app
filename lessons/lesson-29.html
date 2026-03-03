@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 29 - Algorithms (Sorting & Searching) | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 29</div>
+            <h1>Algorithms (Sorting & Searching)</h1>
+            <p class="subtitle">Problem Solving &mdash; Million points of data-la fast-a search and sort panna logic-a
+                kathuko!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Why Algorithms?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Dictionary Search vs Random Page</div>
+                <p>Nee oru dictionary-la "Python"-nu oru word-a thedura. First page-la irudhu one-by-one-a theduna
+                    (**Linear Search**), neraya neram aagum. Idhuku bathula dictionary-a naduvula thirandhu, 'P' munnadi
+                    irukka pinnaadi irukka-nu check panni half-half-a cut panna (**Binary Search**), seconds-la kandu
+                    pudichilaam. Algorithm thaan oru periya problem-a short-cut-la solve panna help pannum.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Sorted list-la fast-a theda use aagura search algorithm peyar enna?</p>
+                <div class="cc-code-box">
+                    Algorithm: <input type="text" class="cc-input" data-answer="Binary Search" style="width: 150px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Sorting & Big O</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>Bubble Sort</b>: Pakkathula irukka elements-a swap panni sort panna (Simple but Slow).</li>
+                    <li><b>Quick Sort</b>: Divide and Conquer logic use panni fast-a sort panna.</li>
+                    <li><b>Big O</b>: Oru algorithm evlo "Steps" edukkudhu-nu measure panna (Speed measurement).</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Linear Search</span>
+<span class="kw">def</span> <span class="fn">linear_search</span>(<span class="var">arr</span>, <span class="var">target</span>):
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="fn">len</span>(<span class="var">arr</span>)):
+        <span class="kw">if</span> <span class="var">arr</span>[<span class="var">i</span>] <span class="op">==</span> <span class="var">target</span>:
+            <span class="kw">return</span> <span class="var">i</span>
+    <span class="kw">return</span> <span class="op">-</span><span class="num">1</span>
+
+<span class="cm"># Bubble Sort logic</span>
+<span class="kw">def</span> <span class="fn">bubble_sort</span>(<span class="var">arr</span>):
+    <span class="var">n</span> <span class="op">=</span> <span class="fn">len</span>(<span class="var">arr</span>)
+    <span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="var">n</span>):
+        <span class="kw">for</span> <span class="var">j</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">0</span>, <span class="var">n</span><span class="op">-</span><span class="var">i</span><span class="op">-</span><span class="num">1</span>):
+            <span class="kw">if</span> <span class="var">arr</span>[<span class="var">j</span>] <span class="op">></span> <span class="var">arr</span>[<span class="var">j</span><span class="op">+</span><span class="num">1</span>]:
+                <span class="var">arr</span>[<span class="var">j</span>], <span class="var">arr</span>[<span class="var">j</span><span class="op">+</span><span class="num">1</span>] <span class="op">=</span> <span class="var">arr</span>[<span class="var">j</span><span class="op">+</span><span class="num">1</span>], <span class="var">arr</span>[<span class="var">j</span>]
+    <span class="kw">return</span> <span class="var">arr</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="29">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Algorithm Master</h2>
+                <p>Short-cut logic catch pannitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="O(log n)">
+                <p class="quiz-q">1. Binary search-oda best potential time complexity enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="O(n)">O(n)</div>
+                    <div class="quiz-opt" data-value="O(log n)">O(log n)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **O(log n)** thaan binary search-oda complexity, idhu
+                    romba fast-a irukkum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="O(n^2)">
+                <p class="quiz-q">2. Bubble sort-oda worst-case complexity enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="O(n)">O(n)</div>
+                    <div class="quiz-opt" data-value="O(n^2)">O(n^2)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Double loop irukkradhaala complexity **O(n^2)**
+                    aayidum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="Sorted">
+                <p class="quiz-q">3. Binary search panna list mandatory-a epdi irukkanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="Random">Random order</div>
+                    <div class="quiz-opt" data-value="Sorted">Sorted order</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Binary Search sorted data-la mattum thaan work aagum.
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="Linear Search">
+                <p class="quiz-q">4. Oru list-la munnadi irundhu onnu onnu-a check panna endha search?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="Linear Search">Linear Search</div>
+                    <div class="quiz-opt" data-value="Binary Search">Binary Search</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Simple sequencing-a theda **Linear Search** thaan
+                    choice.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="Algorithm">
+                <p class="quiz-q">5. Oru task-a step-by-step-a seiya kudukkura instructions-a enna-nu solluvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="Algorithm">Algorithm</div>
+                    <div class="quiz-opt" data-value="Variable">Variable</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Step-by-step logic thaan **Algorithm**.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-30.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 30: Final Project &amp; Best Practices</h3>
+                <p>The Finale &mdash; Putting it all together and becoming a Python Rockstar!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 29 &mdash; Logic Master</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

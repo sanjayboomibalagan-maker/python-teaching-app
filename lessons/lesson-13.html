@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13 - Exception Handling | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 13</div>
+            <h1>Exception Handling</h1>
+            <p class="subtitle">Error Management &mdash; Code crash aagama kapathi, safety-a handle pannu!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> try ... except</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Safety Fuse (Electric Circuit)</div>
+                <p>Namma veetla current overload aana circuit breakdown aagi fuse poyidum. Ithu vee-la irukura fridge,
+                    tv-a safe-a vachukka thaan. Ithu maari program-la ethavathu thappu nadantha (e.g., divided by zero),
+                    program crash aagi stop aagidum. <b>try...except</b> use panna, error vanthaalum program-a crash
+                    aagama "Safety plan"-kku kondu pogalam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Error irukkumanu check panna enna keyword use pannanum?</p>
+                <div class="cc-code-box">
+                    <input type="text" class="cc-input" data-answer="try">:<br>
+                    &nbsp;&nbsp;x = 1 / 0
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Common Exceptions</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>try</b>: Error irukkumanu check panna vendiya code block.</li>
+                    <li><b>except</b>: Error vantha enna pannanum nu solra block.</li>
+                    <li><b>finally</b>: Error vanthaalum varalaatiyum kandippa nadakanum nu solra code block.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">try</span>:
+    <span class="var">num</span> <span class="op">=</span> <span class="nb">int</span>(<span class="fn">input</span>(<span class="st">"Enter a number: "</span>))
+    <span class="var">result</span> <span class="op">=</span> <span class="num">10</span> <span class="op">/</span> <span class="var">num</span>
+    <span class="fn">print</span>(<span class="var">result</span>)
+<span class="kw">except</span> <span class="var">ZeroDivisionError</span>:
+    <span class="fn">print</span>(<span class="st">"Zero-vaala divide panna mudiyathu!"</span>)
+<span class="kw">except</span> <span class="var">ValueError</span>:
+    <span class="fn">print</span>(<span class="st">"Correct-aana number-a type pannu nanba!"</span>)
+<span class="kw">finally</span>:
+    <span class="fn">print</span>(<span class="st">"Operation Finished."</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="13">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Error Handling</h2>
+                <p>Program-a safe-a protect panna kathukitiga-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="except">
+                <p class="quiz-q">1. Error vantha execution handle panna enna keyword venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="error">error</div>
+                    <div class="quiz-opt" data-value="except">except</div>
+                    <div class="quiz-opt" data-value="catch">catch</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python-la errors handle panna <code
+                        class="il">except</code> thaan keyword. Java/JS-la 'catch' use pannuvanga.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="finally">
+                <p class="quiz-q">2. Error vanthaalum varalaatiyum kandippa run aaga vendiya block enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="always">always</div>
+                    <div class="quiz-opt" data-value="finally">finally</div>
+                    <div class="quiz-opt" data-value="last">last</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> File close panrathu maari 'Must run' tasks-a <code
+                        class="il">finally</code> block-la ezhuthuvom.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="ValueError">
+                <p class="quiz-q">3. "123"-ku bathula "Hello"-va int-a matha paatha enna error varum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="TypeError">TypeError</div>
+                    <div class="quiz-opt" data-value="ValueError">ValueError</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Value incompatible-a (Type sari aana format thappu)
+                    iruntha <b>ValueError</b> varum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="stop">
+                <p class="quiz-q">4. Endha control handling-um illana error vantha program enna aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="slow">Slow-aagum</div>
+                    <div class="quiz-opt" data-value="stop">Stop aagidum (Crash)</div>
+                    <div class="quiz-opt" data-value="ignore">Ignore pannidum</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python-la uncaught exceptions direct-a program-a
+                    terminate (crash) pannidum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="ZeroDivisionError">
+                <p class="quiz-q">5. 10 / 0 nu ezhuthuna enna error varum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="MathError">MathError</div>
+                    <div class="quiz-opt" data-value="ZeroDivisionError">ZeroDivisionError</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Mathematics rules padi zero-vaala divison possible
+                    illa, athu <b>ZeroDivisionError</b>.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-14.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 14: OOPs Part 1 - Classes & Objects</h3>
+                <p>Object Oriented Programming start &mdash; Blueprints and Objects.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 13 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

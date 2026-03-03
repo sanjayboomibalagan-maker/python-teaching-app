@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 05 - Loops | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 05</div>
+            <h1>Loops &mdash; for &amp; while</h1>
+            <p class="subtitle">Orey vela thirumba thirumba panna loops thaan solution!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> for Loop & range()</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Running Rounds in a Ground</div>
+                    <p>Teacher solraanga: "Ground-a 5 rounds suthi va." Inga unakku Count theriyum (5). So, count fix-a
+                        iruntha <b>for loop</b> use pannuvom. 1st round... 2nd round... 5th round vanthona stop
+                        panniruva.
+                    </p>
+                </div>
+                <div class="story-img-wrap">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(240, 192, 64, 0.1); font-size:4rem;">
+                        🏃‍♂️</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p><b>for loop</b> sequence-a (numers or text) iterate panna use aagum. Numbers generate panna
+                    <b>range()</b> function
+                    help pannum.</p>
+            </div>
+
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="kw">for</span> <span class="var">i</span> <span
+                        class="kw">in</span> <span class="fn">range</span><span class="op">(</span><span
+                        class="num">5</span><span class="op">):</span></div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">Variable</span>
+                        <span class="part-val">i</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Sequence</span>
+                        <span class="part-val">range(5)</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Indentation</span>
+                        <span class="part-val">4 Spaces</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-banner">
+                <div class="cs-item"><span class="cs-label">range(5)</span><code>0,1,2,3,4</code></div>
+                <div class="cs-item"><span class="cs-label">range(1,6)</span><code>1,2,3,4,5</code></div>
+                <div class="cs-item"><span class="cs-label">range(1,10,2)</span><code>1,3,5,7,9</code></div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># 1 to 5 print panna</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">6</span>):
+    <span class="fn">print</span>(<span class="st">"Round Number:"</span>, <span class="var">i</span>)
+
+<span class="cm"># String iterate panna</span>
+<span class="kw">for</span> <span class="var">char</span> <span class="kw">in</span> <span class="st">"PYTHON"</span>:
+    <span class="fn">print</span>(<span class="var">char</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> while Loop</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Condition Basis</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Mobile Charging</div>
+                    <p>Mobile charge la potruka. <strong>WHILE</strong> Battery < 100%, charge yeritey irukanum. Eppo
+                            100% aagutho (condition false), appo charging stop aagum. Inga count mukkiyam illa,
+                            condition thaan mukkiyam.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(108, 99, 255, 0.1); font-size:4rem;">
+                        🔋</div>
+                </div>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: Increment check</h4>
+                <p>While loop use pannum pothu variable-a update panna maranthuraatheenga (e.g. <code
+                        class="il">i += 1</code>). Appadi update pannaalathaan condition false aagi loop stop aagum.
+                    Illana 'Infinite Loop' vandhudum!</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">battery</span> <span class="op">=</span> <span class="num">95</span>
+
+<span class="kw">while</span> <span class="var">battery</span> <span class="op"><</span> <span class="num">101</span>:
+    <span class="fn">print</span>(<span class="st">f"Charging... {battery}%"</span>)
+    <span class="var">battery</span> <span class="op">+=</span> <span class="num">1</span>  <span class="cm"># Increment</span>
+
+<span class="fn">print</span>(<span class="st">"Full Charge! Battery safe."</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> Loop Control &mdash; break, continue, pass</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Controlling the Loop</h2><span class="section-tag">Keyword Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>break</b>: Loop-a appadiyae stop panni veliya vanthuru.</li>
+                    <li><b>continue</b>: Intha oru step-a mattum skip panni next iteration-kku po.</li>
+                    <li><b>pass</b>: Summa oru placeholder (mela ezhuthumbothu loop empty-a irukka koodathunu use
+                        panrathu).</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># 1 to 10 print pannu, aana 5 vantha stop pannu</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">11</span>):
+    <span class="kw">if</span> <span class="var">i</span> <span class="op">==</span> <span class="num">5</span>:
+        <span class="kw">break</span>
+    <span class="fn">print</span>(<span class="var">i</span>)
+
+<span class="cm"># Odd numbers mattum skip panna (continue use case)</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">11</span>):
+    <span class="kw">if</span> <span class="var">i</span> <span class="op">%</span> <span class="num">2</span> <span class="op">!=</span> <span class="num">0</span>:
+        <span class="kw">continue</span>
+    <span class="fn">print</span>(<span class="st">"Even:"</span>, <span class="var">i</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Infinite Loop (While Loop-la marakka)</div>
+                <p>Condition eppovume true-va iruntha program hang aagum.</p>
+                <code class="wrong">i = 1
+while i <= 5:
+    print(i)
+    # increment (i += 1) ezhuthala</code>
+                <code class="right">while i <= 5:
+    print(i)
+    i += 1</code>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">range() end value</div>
+                <p>range(1, 5) na 5 varaathu, 4 vara thaan varum.</p>
+                <code class="wrong">range(5) # 0, 1, 2, 3, 4</code>
+                <code class="right">range(6) # 0, 1, 2, 3, 4, 5</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon exercise">?</div>
+                <div>
+                    <h2>Practice Exercises</h2><span class="section-tag">Try yourself</span>
+                </div>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q1: for loop use panni unga name-a 10 thadava print pannunga.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">10</span>):
+    <span class="fn">print</span>(<span class="st">"Sanjay"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag easy">Easy</span>
+                <p class="ex-q">Q2: while loop use panni 10 to 1 reverse-la print pannu.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">i</span> <span class="op">=</span> <span class="num">10</span>
+<span class="kw">while</span> <span class="var">i</span> <span class="op">></span> <span class="num">0</span>:
+    <span class="fn">print</span>(<span class="var">i</span>)
+    <span class="var">i</span> <span class="op">-=</span> <span class="num">1</span></pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q3: Multipication Table 5 print pannunga (1 x 5 = 5 ... 10 x 5 = 50).</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="num">11</span>):
+    <span class="fn">print</span>(<span class="st">f"{i} x 5 = {i*5}"</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag med">Medium</span>
+                <p class="ex-q">Q4: Factorial kandupidi. Example: 5! = 1 * 2 * 3 * 4 * 5 = 120.</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">n</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Enter num: "</span>))
+<span class="var">fact</span> <span class="op">=</span> <span class="num">1</span>
+<span class="kw">for</span> <span class="var">i</span> <span class="kw">in</span> <span class="fn">range</span>(<span class="num">1</span>, <span class="var">n</span><span class="op">+</span><span class="num">1</span>):
+    <span class="var">fact</span> <span class="op">*=</span> <span class="var">i</span>
+<span class="fn">print</span>(<span class="st">"Factorial is:"</span>, <span class="var">fact</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div class="ex-card"><span class="diff-tag real">Real-Life Problem</span>
+                <p class="ex-q">Q5: Guessing Game: Secret number 7. User kitta input vangi guess panna sollu. User
+                    correctly guess panra vara loop poganum (While Loop logic).</p>
+                <details class="ans-toggle">
+                    <summary>Show Answer</summary>
+                    <div class="ans-body">
+                        <div class="code-wrap">
+                            <div class="code-head"><span class="lang">Python</span>
+                                <div class="dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="code-body">
+                                <pre><span class="var">secret</span> <span class="op">=</span> <span class="num">7</span>
+<span class="kw">while</span> <span class="kb">True</span>:
+    <span class="var">guess</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Guess the number: "</span>))
+    <span class="kw">if</span> <span class="var">guess</span> <span class="op">==</span> <span class="var">secret</span>:
+        <span class="fn">print</span>(<span class="st">"Correct!"</span>)
+        <span class="kw">break</span>
+    <span class="kw">else</span>:
+        <span class="fn">print</span>(<span class="st">"Wrong! Try again."</span>)</pre>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="05">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Loop-la suthunga!</h2>
+                <p>Loop concepts clear-a irukkanu check pannalam.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="4">
+                <p class="quiz-q">1. range(1, 5) ezhunthuna, loop evvalavu thadava suthum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="5">5 thadava</div>
+                    <div class="quiz-opt" data-value="4">4 thadava</div>
+                    <div class="quiz-opt" data-value="infinite">Infinite</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="break">
+                <p class="quiz-q">2. Loop-a appadiyae stop panni veliya vara enna keyword use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="stop">stop</div>
+                    <div class="quiz-opt" data-value="exit">exit</div>
+                    <div class="quiz-opt" data-value="break">break</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="while">
+                <p class="quiz-q">3. Condition true-va irukkura vara run aaga enna loop best?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="for">for loop</div>
+                    <div class="quiz-opt" data-value="while">while loop</div>
+                    <div class="quiz-opt" data-value="if">if loop</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="continue">
+                <p class="quiz-q">4. Loop-la oru specific iteration-a mattum skip panni next-kku poga enna keyword use
+                    pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="skip">skip</div>
+                    <div class="quiz-opt" data-value="next">next</div>
+                    <div class="quiz-opt" data-value="continue">continue</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="step">
+                <p class="quiz-q">5. range(1, 10, 2) - ithula andha '2' enna velai pannum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="start">Start value</div>
+                    <div class="quiz-opt" data-value="stop">Stop value</div>
+                    <div class="quiz-opt" data-value="step">Step (Skip counts)</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-06.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 06: Lists & List Methods</h3>
+                <p>Ordered collections, indexing, append, remove, sort, list operations.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 05</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

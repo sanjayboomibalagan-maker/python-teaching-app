@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 23 - API Handling | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 23</div>
+            <h1>API Handling (Requests &amp; JSON)</h1>
+            <p class="subtitle">Connecting to the Web &mdash; International server-la irundhu local program-kku data
+                vaangu!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> What is an API?</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Hotel Waiter (The Messenger)</div>
+                <p>Nee oru hotel-ku pora. Nee thaan "Client" (Your program). Kitchen thaan "Server" (API). Nee
+                    kitchen-kulla direct-a poi samayakaara kitta kekka mudiyathu. So, oru "Waiter" (API) vandhu un
+                    menu-a (Request) kitchen-kku kondu povaaru, apram kitchen-la irundhu saapada (Response/Data) unakku
+                    kondu varuvaaru. Ithu thaan <b>API</b> logic.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la popular-ana HTTP requests library peyar enna?</p>
+                <div class="cc-code-box">
+                    import <input type="text" class="cc-input" data-answer="requests" style="width: 100px;">
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> GET and JSON</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Exchange</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>GET</b>: Data-va server kitta irundhu "vaangura" method.</li>
+                    <li><b>JSON</b>: Data-va oru structure-la anupra format (Looks like a Python Dictionary).</li>
+                    <li><b>status_code</b>: 200 na Success, 404 na Not Found.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">import</span> <span class="var">requests</span>
+
+<span class="var">url</span> <span class="op">=</span> <span class="st">"https://jsonplaceholder.typicode.com/todos/1"</span>
+<span class="var">response</span> <span class="op">=</span> <span class="var">requests</span>.<span class="fn">get</span>(<span class="var">url</span>)
+
+<span class="kw">if</span> <span class="var">response</span>.<span class="var">status_code</span> <span class="op">==</span> <span class="num">200</span>:
+    <span class="var">data</span> <span class="op">=</span> <span class="var">response</span>.<span class="fn">json</span>()
+    <span class="fn">print</span>(<span class="var">data</span>[<span class="st">'title'</span>])</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="23">
+            <div class="quiz-header">
+                <h2>Quick Quiz – API Mastery</h2>
+                <p>Internet data handling purinjiducha-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="200">
+                <p class="quiz-q">1. API request success-nu solra standard status code enna?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="404">404</div>
+                    <div class="quiz-opt" data-value="200">200</div>
+                    <div class="quiz-opt" data-value="500">500</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **200 OK** thaan internet protocol-la success signal.
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="json">
+                <p class="quiz-q">2. API-la irundhu varra data format-a Python dictionary-a maatha enna method use
+                    aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="text">.text()</div>
+                    <div class="quiz-opt" data-value="json">.json()</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **.json()** method raw response string-a Python dict-a
+                    parse pannanum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="GET">
+                <p class="quiz-q">3. Data-va server kitta "Request" panni vaanga endha HTTP method use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="GET">GET</div>
+                    <div class="quiz-opt" data-value="POST">POST</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **GET** method thaan reading/fetching-ku thevai padum.
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="dictionary">
+                <p class="quiz-q">4. JSON data structure logic-padi Python-la irukura entha data type maari irukkum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="list">List</div>
+                    <div class="quiz-opt" data-value="dictionary">Dictionary</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> JSON structured key-value pairs-a irukkum, andha
+                    format **Dictionary** maariyae irukkum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="params">
+                <p class="quiz-q">5. URL-kulla extra information (API key maari) anuppa requests.get-la enna argument
+                    use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="params">params</div>
+                    <div class="quiz-opt" data-value="data">data</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> **params** (Parameters) thaan URL-oda queries (e.g.,
+                    ?key=value) anuppa correct choice.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-24.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 24: Web Scraping</h3>
+                <p>Data Extraction &mdash; Entha website-la irundhum HTML-a extract panni data edu!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 23 &mdash; Web Integrated</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

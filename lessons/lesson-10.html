@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10 - Functions & Return | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 10</div>
+            <h1>Functions &amp; Return</h1>
+            <p class="subtitle">Code Reusability &mdash; orey logic-a thirumba thirumba ezhuthama oru module-a mathu!
+            </p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Function Basics</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Coffee Vending Machine</div>
+                <p>Oru machine irukku. Nee "Coffee" button-a amukuna, athu milk, sugar, and powder-a mix panni unakku
+                    coffee-a kudukkum. Machine kulla enna nadakuthunu unnakku theriya venam, aana "Input" (Button push)
+                    kudutha "Output" (Coffee) varum. Ithu thaan <b>Function</b> &mdash; oru specific task-a panna
+                    ready-a ezhuthi vachirukura code.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Python-la function-a <b>def</b> keyword vachi start pannuvom.</p>
+                <ul class="concept-list">
+                    <li><b>def</b>: Define function.</li>
+                    <li><b>Parameters</b>: Function-kku ulla anuppura inputs.</li>
+                    <li><b>return</b>: Function vela mudicha apparam kudukkura pathil (Output).</li>
+                    <li><b>Call</b>: Function-a use panna call pannanum (e.g., `greet()`).</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Define pannuthal</span>
+<span class="kw">def</span> <span class="fn">greeting</span>(<span class="var">name</span>):
+    <span class="fn">print</span>(<span class="st">f"Vanakkam {name}! Eppadi irukiga?"</span>)
+
+<span class="cm"># Call pannuthal</span>
+<span class="fn">greeting</span>(<span class="st">"Sanjay"</span>)
+<span class="fn">greeting</span>(<span class="st">"Raja"</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Parameters vs Arguments</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Inputs in Detail</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>Parameter</b>: Function define panra appo ezhuthura variables (e.g., `def add(a, b)`).</li>
+                    <li><b>Argument</b>: Actual call-la kudukura values (e.g., `add(5, 10)`).</li>
+                    <li><b>Default Arguments</b>: Argument kudukkalana automati-a eduthuka vendiya default value.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">def</span> <span class="fn">welcome</span>(<span class="var">name</span>, <span class="var">city</span><span class="op">=</span><span class="st">"Chennai"</span>):
+    <span class="fn">print</span>(<span class="st">f"Welcome {name} from {city}"</span>)
+
+<span class="fn">welcome</span>(<span class="st">"Arun"</span>)  <span class="cm"># Arun from Chennai (Default)</span>
+<span class="fn">welcome</span>(<span class="st">"Vijay"</span>, <span class="st">"Madurai"</span>)  <span class="cm"># Vijay from Madurai</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">3</span> The 'return' Keyword</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Value Returning</h2><span class="section-tag">Result</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Calculator Result</div>
+                <p>Nee calculator-la `2 + 2` podura. Athu screen-la result-a mathira unakku thiruthipum "4" nu oru value
+                    kudukum. Itha thaan <b>return</b>-um pannum &mdash; block-la calculate panna value-a veliya oru
+                    variable-kaku anuppum.</p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">def</span> <span class="fn">calculate_gst</span>(<span class="var">price</span>):
+    <span class="var">tax</span> <span class="op">=</span> <span class="var">price</span> <span class="op">*</span> <span class="num">0.18</span>
+    <span class="kw">return</span> <span class="var">tax</span>
+
+<span class="cm"># Value-a variable-la store pannalam</span>
+<span class="var">my_tax</span> <span class="op">=</span> <span class="fn">calculate_gst</span>(<span class="num">1000</span>)
+<span class="fn">print</span>(<span class="st">"Tax amount:"</span>, <span class="var">my_tax</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="10">
+            <div class="quiz-header">
+                <h2>🏆 Mega Python 🌱 Beginner Quiz (Lesson 10 & Review)</h2>
+                <p>🌱 Beginner level-a finish panna intha 10 specialized questions-kku pathil sollu!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="def">
+                <p class="quiz-q">1. Python-la function define panna enna keyword venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="func">func</div>
+                    <div class="quiz-opt" data-value="def">def</div>
+                    <div class="quiz-opt" data-value="function">function</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="argument">
+                <p class="quiz-q">2. Function call panra appo anuppura 'actual values'-kku enna peyar?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="parameter">Parameters</div>
+                    <div class="quiz-opt" data-value="argument">Arguments</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="return">
+                <p class="quiz-q">3. Function vela mudicha apparam pathil (result) anuppa enna keyword use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="give">give</div>
+                    <div class="quiz-opt" data-value="send">send</div>
+                    <div class="quiz-opt" data-value="return">return</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="fast">
+                <p class="quiz-q">4. Orey code-a thirumba thirumba ezhuthama reusable-a aakka function help pannuma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="fast">Aama, code optimized aagum</div>
+                    <div class="quiz-opt" data-value="no">Illa, functions slow-num</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="0">
+                <p class="quiz-q">5. Revision: List index enga start aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="1">1</div>
+                    <div class="quiz-opt" data-value="0">0</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="immutable">
+                <p class="quiz-q">6. Revision: Tuple-a matha mudiyuma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="mutable">Aama (Mutable)</div>
+                    <div class="quiz-opt" data-value="immutable">Illa (Immutable)</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="dictionary">
+                <p class="quiz-q">7. Revision: Key-Value pairs-a store panna enna collection best?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="list">List</div>
+                    <div class="quiz-opt" data-value="set">Set</div>
+                    <div class="quiz-opt" data-value="dictionary">Dictionary</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="unique">
+                <p class="quiz-q">8. Revision: Set-la duplicates allow aaguma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="yes">Aama</div>
+                    <div class="quiz-opt" data-value="unique">Illa, only unique items</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="indentation">
+                <p class="quiz-q">9. Revision: Function ulla irukura code-a identify panna enna venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="brackets">{} Brackets</div>
+                    <div class="quiz-opt" data-value="indentation">Indentation (4 spaces)</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="colon">
+                <p class="quiz-q">10. Revision: `if 5 > 2` ku apparam enna symbol venum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="semi">;</div>
+                    <div class="quiz-opt" data-value="colon">:</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Finish 🌱 Beginner Level</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-11.html">
+                <div class="nl-label">Next Level: 🚀 Intermediate</div>
+                <h3>Lesson 11: Modules & import</h3>
+                <p>Built-in modules, custom modules, from...import, __name__, packages.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 10 &mdash; 🌱 Beginner Final</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

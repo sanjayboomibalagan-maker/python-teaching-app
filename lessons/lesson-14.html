@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14 - OOPs: Classes & Objects | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 14</div>
+            <h1>OOPs: Classes &amp; Objects</h1>
+            <p class="subtitle">Object Oriented Programming &mdash; Python-oda "Building Blocks"-a blueprint vachi
+                uruvaaku!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Class vs Object</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="story-title">Car Blueprint vs Actual Car</div>
+                <p>Oru car company oru design (Blueprint) panni vachiruppanga. Athula car-ku 4 wheels, oru steering, and
+                    engine irukanum nu ezhudhi irukkum. Ithu thaan <b>Class</b>. Intha blueprint-a vachi factory-la
+                    senja actual car thaan <b>Object</b>. Blueprint onnu thaan, aana athai vachi different colors-la
+                    (Red car, Blue car) neraya actual cars-a senjukalam.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="cc-label"><span>💡</span> Quick Concept Check</div>
+            <div class="concept-check">
+                <p class="cc-q">Python-la oru class-a create panna enna keyword use pannanum?</p>
+                <div class="cc-code-box">
+                    <input type="text" class="cc-input" data-answer="class"> MyClass:
+                </div>
+                <button class="cc-btn">Check Answer</button>
+                <div class="cc-fb"></div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> The __init__() and 'self'</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Mechanism</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <ul class="concept-list">
+                    <li><b>__init__</b>: Oru constructor function. Object create aagum pothu automatic-a run aagum.</li>
+                    <li><b>self</b>: Ithu current object-a reference pannum. Athavathu "Intha car-oda color", "Intha
+                        car-oda price" nu solra maari.</li>
+                </ul>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="kw">class</span> <span class="fn">Car</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>, <span class="var">name</span>, <span class="var">color</span>):
+        <span class="var">self</span>.<span class="var">name</span> <span class="op">=</span> <span class="var">name</span>
+        <span class="var">self</span>.<span class="var">color</span> <span class="op">=</span> <span class="var">color</span>
+
+<span class="cm"># Creating Objects</span>
+<span class="var">my_car</span> <span class="op">=</span> <span class="fn">Car</span>(<span class="st">"Tata Nexon"</span>, <span class="st">"Blue"</span>)
+<span class="var">friend_car</span> <span class="op">=</span> <span class="fn">Car</span>(<span class="st">"Thar"</span>, <span class="st">"Black"</span>)
+
+<span class="fn">print</span>(<span class="var">my_car</span>.<span class="var">name</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="14">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Classes & Objects</h2>
+                <p>Blueprint logic purinjiducha-nu check pannalam!</p>
+            </div>
+
+            <div class="quiz-item" data-answer="blueprint">
+                <p class="quiz-q">1. Class-a logic-padi eppadi sollavum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="physical">Physical Product</div>
+                    <div class="quiz-opt" data-value="blueprint">Blueprint / Template</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Class-nu sonna athu verum Template thaan. Actual data
+                    objects-la thaan irukkum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="object">
+                <p class="quiz-q">2. Class design-a vachi uruvaakura actual "item"-ku enna peyar?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="structure">Structure</div>
+                    <div class="quiz-opt" data-value="object">Object (Instance)</div>
+                    <div class="quiz-opt" data-value="module">Module</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Oru class-oda actual manifestation thaan
+                    <b>Object</b>.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="init">
+                <p class="quiz-q">3. Object create aagura appo initial values-a set panna endha function use aagum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="start">__start__</div>
+                    <div class="quiz-opt" data-value="init">__init__</div>
+                    <div class="quiz-opt" data-value="main">__main__</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">__init__</code> constructor thaan
+                    objects-a initialize panna use aagum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="self">
+                <p class="quiz-q">4. Class methods-la current object-a access panna endha parameter must-a irukanum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="this">this</div>
+                    <div class="quiz-opt" data-value="self">self</div>
+                    <div class="quiz-opt" data-value="me">me</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> Python-la <code class="il">self</code> thaan current
+                    instance variables-a call panna help pannum.</div>
+            </div>
+
+            <div class="quiz-item" data-answer="dot">
+                <p class="quiz-q">5. Object-la irukura properties-a access panna enna symbol use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="arrow">Arrow (->)</div>
+                    <div class="quiz-opt" data-value="dot">Dot (.)</div>
+                </div>
+                <div class="quiz-explanation"><b>Explanation:</b> <code class="il">my_car.color</code> maari <b>Dot</b>
+                    symbol thaan attributes access pannum.</div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-15.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 15: Inheritance & Polymorphism</h3>
+                <p>Code Reusability Part 2 &mdash; Property-a appa kitta irundhu pillaiku mathu!</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 14 &mdash; 🚀 Intermediate</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>

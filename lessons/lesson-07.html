@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 07 - Tuples | PythonMastery</title>
+    <link rel="stylesheet" href="../python-course.css">
+</head>
+
+<body>
+    <div class="bg-anim">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <nav class="navbar">
+        <div class="container"><a href="../index.html" class="nav-logo">PythonMastery</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">All Lessons</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="lesson-container">
+        <div class="back-nav"><a href="../index.html">&larr; Back to All Lessons</a></div>
+        <header class="lesson-hero">
+            <div class="lesson-badge"><span class="dot"></span> Lesson 07</div>
+            <h1>Tuples</h1>
+            <p class="subtitle">Immutable collections &mdash; oru thadava fix pannita maatha mudiyaathu!</p>
+        </header>
+
+        <div class="sub-head"><span class="sn">1</span> Tuple Basics</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon story">S</div>
+                <div>
+                    <h2>Real-Life Example</h2><span class="section-tag">Story</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <div>
+                    <div class="story-title">Hotel Fixed Meals</div>
+                    <p>Oru hotel-la "Fixed Meals" sapda pora. Athula "Satham, Sambar, Rasam, Appalam" fix-a ezhuthi
+                        vachirupaanga. Nee athula sambar-a mathi veg-biryani venum-nu keka mudiyaathu. Athaan
+                        <b>Tuple</b>
+                        &mdash; items-a change panna mudiyaathu.</p>
+                </div>
+                <div class="story-img-wrap">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(255, 101, 132, 0.1); font-size:4rem;">
+                        🍱</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Concept</h2><span class="section-tag">Understanding</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p><b>Tuple</b>-a normal brackets <b>( )</b> ulla ezhuthanam. Ithoda mukkiya nature <b>Immutability</b>.
+                </p>
+            </div>
+
+            <div class="anatomy">
+                <div class="anatomy-line"><span class="var">point</span> <span class="op">=</span> <span
+                        class="op">(</span><span class="num">10</span><span class="op">,</span> <span
+                        class="num">20</span><span class="op">)</span></div>
+                <div class="anatomy-parts">
+                    <div class="part">
+                        <span class="part-name">Normal Brackets</span>
+                        <span class="part-val">( )</span>
+                    </div>
+                    <div class="part">
+                        <span class="part-name">Unchangeable</span>
+                        <span class="part-val">Fixed Values</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-banner">
+                <div class="cs-item"><span class="cs-label">List</span><code>Mutable [ ]</code></div>
+                <div class="cs-item"><span class="cs-label">Tuple</span><code>Immutable ( )</code></div>
+                <div class="cs-item"><span class="cs-label">Speed</span><code>Tuple is Faster</code></div>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="var">my_tuple</span> <span class="op">=</span> (<span class="st">"Satham"</span>, <span class="st">"Sambar"</span>, <span class="st">"Rasam"</span>)
+<span class="fn">print</span>(<span class="var">my_tuple</span>[<span class="num">0</span>])  <span class="cm"># Satham</span>
+
+<span class="cm"># Error varum: Tuple-a mathamudiyaathu</span>
+<span class="cm"># my_tuple[0] = "Biryani"  # TypeError</span></pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <div class="sub-head"><span class="sn">2</span> Tuple Packing & Unpacking</div>
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon concept">C</div>
+                <div>
+                    <h2>Magic of Unpacking</h2><span class="section-tag">Logic</span>
+                </div>
+            </div>
+            <div class="concept-card">
+                <p>Multiple variables-kku ore line-la values assign panna unpacking help pannum.</p>
+            </div>
+
+            <div class="pro-tip">
+                <h4>💡 Pro Tip: Magic Unpacking</h4>
+                <p>Tuple-la irukkura values-a thani thani variable-kku sethu assign pannalaam. <br> <code
+                        class="il">name, age = ("Sanjay", 25)</code> <br> Ippa name="Sanjay" nu aagidum! </p>
+            </div>
+            <div class="code-wrap">
+                <div class="code-head"><span class="lang">Python</span>
+                    <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="code-body">
+                    <pre><span class="cm"># Packing</span>
+<span class="var">point</span> <span class="op">=</span> (<span class="num">10</span>, <span class="num">20</span>)
+
+<span class="cm"># Unpacking</span>
+<span class="var">x</span>, <span class="var">y</span> <span class="op">=</span> <span class="var">point</span>
+<span class="fn">print</span>(<span class="st">"X coordinate:"</span>, <span class="var">x</span>)
+<span class="fn">print</span>(<span class="st">"Y coordinate:"</span>, <span class="var">y</span>)</pre>
+                </div>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section">
+            <div class="section-header">
+                <div class="section-icon mistake">!</div>
+                <div>
+                    <h2>Common Mistakes</h2><span class="section-tag">Watch out</span>
+                </div>
+            </div>
+            <div class="mistake-card">
+                <div class="mistake-title">Single Element Tuple</div>
+                <p>Orey oru item tuple-la podum pothu comma marakka koodathuu.</p>
+                <code class="wrong">t = (5)   # Ithuva oru integer thaan</code>
+                <code class="right">t = (5,)  # Ithu thaan tuple</code>
+            </div>
+        </section>
+
+        <hr class="topic-divider">
+        <section class="lesson-section quiz-section" data-lesson="07">
+            <div class="quiz-header">
+                <h2>Quick Quiz – Fixed data check!</h2>
+                <p>Tuples clear-a irukkanu check pannalam.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="brackets">
+                <p class="quiz-q">1. Tuple create panna enna brackets use pannuvom?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="square">[] Square brackets</div>
+                    <div class="quiz-opt" data-value="brackets">() Normal brackets</div>
+                    <div class="quiz-opt" data-value="curly">{} Curly braces</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="immutable">
+                <p class="quiz-q">2. Tuple items-a matha mudiyathu - ithukku enna peyar?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="mutable">Mutable</div>
+                    <div class="quiz-opt" data-value="immutable">Immutable</div>
+                    <div class="quiz-opt" data-value="fixed">Fixed list</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="yes">
+                <p class="quiz-q">3. Tuple-la duplicate items allow panna mudiyauma?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="yes">Aama, allow pannum</div>
+                    <div class="quiz-opt" data-value="no">Illa, unique-a thaan irukanum</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="comma">
+                <p class="quiz-q">4. Single item tuple 't = (10' apparam enna symbole poda num?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="dot">.</div>
+                    <div class="quiz-opt" data-value="comma">,</div>
+                    <div class="quiz-opt" data-value="null">ethuvum illai</div>
+                </div>
+            </div>
+
+            <div class="quiz-item" data-answer="fast">
+                <p class="quiz-q">5. List-a vida Tuple eppadi irukkum?</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-value="slow">Slow-a irukkum</div>
+                    <div class="quiz-opt" data-value="fast">Fast-a irukkum</div>
+                    <div class="quiz-opt" data-value="same">Same speed thaan</div>
+                </div>
+            </div>
+
+            <button class="quiz-submit-btn">Check My Score</button>
+            <div class="quiz-result"></div>
+        </section>
+
+        <div class="next-lesson"><a href="lesson-08.html">
+                <div class="nl-label">Next Lesson</div>
+                <h3>Lesson 08: Dictionaries</h3>
+                <p>Key-value pairs, CRUD operations, dictionary methods, nested dicts.</p>
+                <div class="arrow">&rarr;</div>
+            </a></div>
+        <footer class="lesson-footer">
+            <p>Python Mastery &mdash; Lesson 07</p>
+        </footer>
+    </div>
+    <script src="../quiz.js"></script>
+</body>
+
+</html>
