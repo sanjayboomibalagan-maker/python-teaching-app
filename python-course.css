@@ -2383,3 +2383,44 @@ code.il {
 .animate-float {
     animation: float 4s infinite ease-in-out;
 }
+
+/* ===== CREATOR IDENTITY ===== */
+.hero-creator {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.site-footer,
+.lesson-footer {
+    padding: 100px 20px 60px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 100px;
+    background: linear-gradient(to top, rgba(124, 119, 255, 0.02), transparent);
+}
+
+.site-footer p,
+.lesson-footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.footer-credit {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-top: 20px;
+    display: block;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
