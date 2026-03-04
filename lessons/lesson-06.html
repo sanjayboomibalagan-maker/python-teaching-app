@@ -400,7 +400,7 @@ L.append([3, 4]) # [1, 2, [3, 4]] - Nested!</code>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/python-teaching-app/sw.js')
                     .then((reg) => console.log('SW registered', reg.scope))
                     .catch((err) => console.log('SW failed', err));
             });

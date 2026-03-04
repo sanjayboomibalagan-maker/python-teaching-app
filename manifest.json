@@ -2,37 +2,67 @@
     "name": "Python Mastery - Complete Course",
     "short_name": "PythonMastery",
     "description": "Learn Python from zero to hero. 30 lessons covering basics to advanced concepts with real-life Indian examples and Tanglish explanations.",
-    "start_url": "/index.html",
+    "id": "com.sanjay.pythonmastery",
+    "start_url": "/python-teaching-app/index.html",
     "display": "standalone",
     "background_color": "#0a0a1a",
     "theme_color": "#6c63ff",
     "orientation": "portrait-primary",
-    "scope": "/",
+    "scope": "/python-teaching-app/",
     "lang": "en",
+    "dir": "ltr",
     "categories": [
         "education",
         "books"
     ],
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "assets/icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
             "src": "assets/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ],
-    "screenshots": [],
+    "screenshots": [
+        {
+            "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Python Mastery Home Screen"
+        },
+        {
+            "src": "assets/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Python Mastery Mobile View"
+        }
+    ],
     "shortcuts": [
         {
             "name": "Beginner Lessons",
             "short_name": "Beginner",
-            "url": "/index.html#beginner",
+            "url": "/python-teaching-app/index.html#beginner",
             "icons": [
                 {
                     "src": "assets/icons/icon-192x192.png",
@@ -43,7 +73,7 @@
         {
             "name": "Intermediate Lessons",
             "short_name": "Intermediate",
-            "url": "/index.html#intermediate",
+            "url": "/python-teaching-app/index.html#intermediate",
             "icons": [
                 {
                     "src": "assets/icons/icon-192x192.png",
@@ -54,7 +84,7 @@
         {
             "name": "Advanced Lessons",
             "short_name": "Advanced",
-            "url": "/index.html#advanced",
+            "url": "/python-teaching-app/index.html#advanced",
             "icons": [
                 {
                     "src": "assets/icons/icon-192x192.png",

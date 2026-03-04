@@ -1,25 +1,26 @@
 // Python Mastery - Service Worker
 const CACHE_NAME = 'python-mastery-v1';
+const BASE_PATH = '/python-teaching-app';
 
 // Files to cache for offline use
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/python-course.css',
-    '/quiz.js',
-    '/manifest.json',
-    '/assets/icons/icon-192x192.png',
-    '/assets/icons/icon-512x512.png',
-    '/assets/bus.png',
-    '/assets/grocery.png',
-    '/assets/nameboard.png',
-    '/assets/tea-shop.png'
+    `${BASE_PATH}/`,
+    `${BASE_PATH}/index.html`,
+    `${BASE_PATH}/python-course.css`,
+    `${BASE_PATH}/quiz.js`,
+    `${BASE_PATH}/manifest.json`,
+    `${BASE_PATH}/assets/icons/icon-192x192.png`,
+    `${BASE_PATH}/assets/icons/icon-512x512.png`,
+    `${BASE_PATH}/assets/bus.png`,
+    `${BASE_PATH}/assets/grocery.png`,
+    `${BASE_PATH}/assets/nameboard.png`,
+    `${BASE_PATH}/assets/tea-shop.png`
 ];
 
 // Dynamically add all 30 lesson pages
 for (let i = 1; i <= 30; i++) {
     const num = String(i).padStart(2, '0');
-    ASSETS_TO_CACHE.push(`/lessons/lesson-${num}.html`);
+    ASSETS_TO_CACHE.push(`${BASE_PATH}/lessons/lesson-${num}.html`);
 }
 
 // Install event - cache all assets
@@ -69,7 +70,7 @@ self.addEventListener('fetch', (event) => {
             .catch(() => {
                 // Offline fallback - return the main page
                 if (event.request.mode === 'navigate') {
-                    return caches.match('/index.html');
+                    return caches.match(`${BASE_PATH}/index.html`);
                 }
             })
     );
