@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 25 - Virtual Environments (venv) | PythonMastery</title>
     <link rel="stylesheet" href="../python-course.css">
+    <!-- PWA Support -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#6c63ff">
 </head>
 
 <body>
@@ -169,6 +172,16 @@
         </footer>
     </div>
     <script src="../quiz.js"></script>
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((reg) => console.log('SW registered', reg.scope))
+                    .catch((err) => console.log('SW failed', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

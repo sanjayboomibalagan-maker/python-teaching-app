@@ -8,6 +8,13 @@
         content="Learn Python from zero to hero. 30 lessons covering basics to advanced concepts with real-life Indian examples and Tanglish explanations.">
     <title>Python Mastery - Complete Course | Basics to 🔥 Advanced</title>
     <link rel="stylesheet" href="python-course.css">
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6c63ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PythonMastery">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
 </head>
 
 <body>
@@ -385,6 +392,17 @@
                 if (event.target == modal) {
                     closeCheatSheet();
                 }
+            }
+        </script>
+
+        <!-- Service Worker Registration -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then((reg) => console.log('✅ Service Worker registered:', reg.scope))
+                        .catch((err) => console.log('❌ SW registration failed:', err));
+                });
             }
         </script>
 </body>
