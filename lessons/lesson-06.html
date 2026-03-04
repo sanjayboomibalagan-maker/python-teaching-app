@@ -100,6 +100,25 @@
 <span class="fn">print</span>(<span class="nb">len</span>(<span class="var">fruits</span>))    <span class="cm"># 3 items</span></pre>
                 </div>
             </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Copying vs Referencing</h3>
+                <p>List-a innoru variable-ku assign panna, Python puthu list create pannathu. Orey box-kku vera peyar
+                    thaan vekkum.</p>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>The Reference Problem</h4>
+                        <code>L1 = [1, 2]; L2 = L1</code> <br>
+                        <p>Ippo <code>L2</code>-a mathuna <code>L1</code>-um maaridum! Rendum orey memory-a point
+                            pannuthu.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Safe Copying</h4>
+                        <p>Puthu box venum na <code>.copy()</code> method use pannanum.</p>
+                        <code>L2 = L1.copy()</code>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <hr class="topic-divider">
@@ -155,6 +174,23 @@
 
 <span class="kw">for</span> <span class="var">s</span> <span class="kw">in</span> <span class="var">students</span>:
     <span class="fn">print</span>(<span class="st">"Welcome,"</span>, <span class="var">s</span>)</pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: List Comprehension</h3>
+                <p>Oru loop-um, list filter-um orey line-la ezhutha ithu thaan ultimate technique.</p>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>Compact Code</h4>
+                        <code>numbers = [i*i for i in range(5)]</code> <br>
+                        <small>Output: [0, 1, 4, 9, 16]</small>
+                    </div>
+                    <div class="dd-item">
+                        <h4>With Condition</h4>
+                        <code>evens = [x for x in range(10) if x%2==0]</code>
+                        <p>Intha maari ezhuthuna unga code "Pythonic"-a irukkunu ellarum solve paanga!</p>
+                    </div>
                 </div>
             </div>
         </section>

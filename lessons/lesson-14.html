@@ -87,9 +87,29 @@
 
 <span class="cm"># Creating Objects</span>
 <span class="var">my_car</span> <span class="op">=</span> <span class="fn">Car</span>(<span class="st">"Tata Nexon"</span>, <span class="st">"Blue"</span>)
-<span class="var">friend_car</span> <span class="op">=</span> <span class="fn">Car</span>(<span class="st">"Thar"</span>, <span class="st">"Black"</span>)
-
 <span class="fn">print</span>(<span class="var">my_car</span>.<span class="var">name</span>)</pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Real OOP Power</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>Class Variables</h4>
+                        <p>Ella objects-kum common-a oru data (e.g. <code>wheels = 4</code>) irukanum na atha
+                            <code>__init__</code> veliya define pannanum.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Encapsulation (_, __)</h4>
+                        <p>Oru variable-a veliya yarum easy-a matha koodathu na prefix-la underscore podalam.</p>
+                        <code>self.__engine_code = "XYZ"</code> <br>
+                        <small>(Private Variable logic)</small>
+                    </div>
+                    <div class="dd-item">
+                        <h4>__str__ Magic Method</h4>
+                        <p>Object-a <code>print()</code> pannum pothu enna varanum nu define panna <code>__str__</code>
+                            use aagum.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -119,7 +139,8 @@
                     <div class="quiz-opt" data-value="module">Module</div>
                 </div>
                 <div class="quiz-explanation"><b>Explanation:</b> Oru class-oda actual manifestation thaan
-                    <b>Object</b>.</div>
+                    <b>Object</b>.
+                </div>
             </div>
 
             <div class="quiz-item" data-answer="init">

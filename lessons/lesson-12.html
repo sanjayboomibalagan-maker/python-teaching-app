@@ -40,8 +40,10 @@
             <div class="story-card">
                 <div class="story-title">Diary (Notebook)</div>
                 <p>Nee oru diary maintain panra. Athula 3 things pannuva: <b>1.</b> Diary-a open panni padipa (Read).
-                    <b>2.</b> Pudhu page-la ezhuthuva (Write). <b>3.</b> Already ezhuthunathuku apparam innum konjam notes
-                    serppa (Append). Program close aanaalum data pogama iruka, naama file-la store pannanum.</p>
+                    <b>2.</b> Pudhu page-la ezhuthuva (Write). <b>3.</b> Already ezhuthunathuku apparam innum konjam
+                    notes
+                    serppa (Append). Program close aanaalum data pogama iruka, naama file-la store pannanum.
+                </p>
             </div>
         </section>
 
@@ -91,6 +93,28 @@
     <span class="fn">print</span>(<span class="var">content</span>)</pre>
                 </div>
             </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Professional File Ops</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>Binary Mode ('rb', 'wb')</h4>
+                        <p>Images, PDFs, or Videos handle panna binary mode use pannanum. Ithu computer raw bytes-a read
+                            pannum.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>JSON for Objects</h4>
+                        <p>Dictionary or Lists-a file-la save panna JSON format best. Python <code>json</code> module
+                            itha easy-a handle pannum.</p>
+                        <code>json.dump(my_dict, file)</code>
+                    </div>
+                    <div class="dd-item">
+                        <h4>seek() & tell()</h4>
+                        <p>File cursor enga irukkunu theriyanum na <code>tell()</code>, cursor-a mathanum na
+                            <code>seek()</code> use pannuvom.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <hr class="topic-divider">
@@ -138,7 +162,8 @@
                     <div class="quiz-opt" data-value="r">Read ('r')</div>
                 </div>
                 <div class="quiz-explanation"><b>Explanation:</b> Nee mode mention pannaalana, Python automatic-a
-                    <b>'r'</b> (Read) mode thaan eduthukkum.</div>
+                    <b>'r'</b> (Read) mode thaan eduthukkum.
+                </div>
             </div>
 
             <div class="quiz-item" data-answer="close">

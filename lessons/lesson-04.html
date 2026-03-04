@@ -47,7 +47,9 @@
                         conditional statements.</p>
                 </div>
                 <div class="story-img-wrap">
-                    <img src="../assets/bus.png" alt="Bus Ticket Decision Visual">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(255, 165, 2, 0.1); font-size:4rem;">
+                        🚌</div>
                 </div>
             </div>
         </section>
@@ -106,11 +108,29 @@
                     <pre><span class="var">age</span> <span class="op">=</span> <span class="fn">int</span>(<span class="fn">input</span>(<span class="st">"Enter your age: "</span>))
 
 <span class="kw">if</span> <span class="var">age</span> <span class="op">>=</span> <span class="num">18</span>:
-    <span class="fn">print</span>(<span class="st">"Nee vote poda thaguthi aanavan (Eligible)!"</span>)
+    <span class="fn">print</span>(<span class="st">"Eligible to vote!"</span>)
 <span class="kw">elif</span> <span class="var">age</span> <span class="op">>=</span> <span class="num">13</span>:
-    <span class="fn">print</span>(<span class="st">"Nee innum teenager thaan."</span>)
+    <span class="fn">print</span>(<span class="st">"Teenager"</span>)
 <span class="kw">else</span>:
-    <span class="fn">print</span>(<span class="st">"Nee chinna kozhanthai."</span>)</pre>
+    <span class="fn">print</span>(<span class="st">"Child"</span>)</pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Truthiness & Ternary</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>"The Truth" in Python</h4>
+                        <p>Python-la <code>0</code>, <code>None</code>, <code>""</code> (empty string), <code>[]</code>
+                            (empty list) - ellaamey <b>False</b> thaan. Itha thavira ethu irunthaalum <b>True</b>.</p>
+                        <code>if "": print("Hi")</code> <br>
+                        <small>Output: Nothing (Empty string is False)</small>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Ternary Operator (One-liner If)</h4>
+                        <p>Professional codes-la <code>if/else</code>-a orey line-la ezhuthuvaanga.</p>
+                        <code>status = "Adult" if age >= 18 else "Minor"</code>
+                    </div>
                 </div>
             </div>
         </section>
@@ -197,11 +217,22 @@
 
 <span class="kw">if</span> <span class="var">has_card</span>:
     <span class="kw">if</span> <span class="var">pin</span> <span class="op">==</span> <span class="num">1234</span>:
-        <span class="fn">print</span>(<span class="st">"Login Success! Welcome!"</span>)
+        <span class="fn">print</span>(<span class="st">"Login Success!"</span>)
     <span class="kw">else</span>:
         <span class="fn">print</span>(<span class="st">"Wrong PIN!"</span>)
 <span class="kw">else</span>:
-    <span class="fn">print</span>(<span class="st">"Pleaase insert your card."</span>)</pre>
+    <span class="fn">pass</span>  <span class="cm"># Innum code ezhuthala</span></pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: The pass Keyword</h3>
+                <p>Python-la empty blocks allowance illa. Oru condition ezhuthitu apparam code ezhuthalaam nu ninaicha,
+                    empty-a vidakoodathu.</p>
+                <div class="dd-item">
+                    <h4>Why pass?</h4>
+                    <p><code>pass</code> keyword use panna, Python antha block-a skip pannum. Ithu oru "Place Holder".
+                        <code>NotImplementedError</code> thavira ithu thaan professional approach.</p>
                 </div>
             </div>
         </section>

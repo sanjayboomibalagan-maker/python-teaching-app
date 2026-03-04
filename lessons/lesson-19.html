@@ -26,7 +26,8 @@
         <header class="lesson-hero">
             <div class="lesson-badge"><span class="dot"></span> Lesson 19</div>
             <h1>Decorators &amp; Generators</h1>
-            <p class="subtitle">🔥 Advanced Features &mdash; Functions-uda special behavior and efficient data streaming!
+            <p class="subtitle">🔥 Advanced Features &mdash; Functions-uda special behavior and efficient data
+                streaming!
             </p>
         </header>
 
@@ -43,7 +44,8 @@
                 <p>Nee oru mobile phone vachirukka. Phone call panna use aagum. Ippo athula oru shock-proof "Case"
                     podura. Phone-oda original function (Calling) maarala, aana extra safety vandhirukku. Ithu thaan
                     <b>Decorator</b>. Oru existing function-a modify pannaama, athuku mela extra features (Logging,
-                    Authentication) add panna use aagum.</p>
+                    Authentication) add panna use aagum.
+                </p>
             </div>
         </section>
 
@@ -89,6 +91,28 @@
 
 <span class="var">gen</span> <span class="op">=</span> <span class="fn">my_generator</span>()
 <span class="fn">print</span>(<span class="nb">next</span>(<span class="var">gen</span>)) <span class="cm"># Output: 1</span></pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Advanced Syntax Magic</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>functools.wraps</h4>
+                        <p>Decorator ezhuthum pothu original function-oda name and docstring poirama irukka
+                            <code>@functools.wraps(func)</code> use pannanum. Ithu professional coding standard.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Generator Expressions</h4>
+                        <p>List comprehension maari bracket mathuna athu generator expression aagi memory save pannum.
+                        </p>
+                        <code>(x*x for x in range(10000))</code>
+                    </div>
+                    <div class="dd-item">
+                        <h4>send() method</h4>
+                        <p>Generator-la values-a edukkurathu mattum illama, <code>gen.send(value)</code> panni generator
+                            ulla data-vum anupalam! Ithu coroutines logic-ku base.</p>
+                    </div>
                 </div>
             </div>
         </section>

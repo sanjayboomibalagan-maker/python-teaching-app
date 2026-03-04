@@ -43,7 +43,8 @@
                     <p>Oru hotel-la "Fixed Meals" sapda pora. Athula "Satham, Sambar, Rasam, Appalam" fix-a ezhuthi
                         vachirupaanga. Nee athula sambar-a mathi veg-biryani venum-nu keka mudiyaathu. Athaan
                         <b>Tuple</b>
-                        &mdash; items-a change panna mudiyaathu.</p>
+                        &mdash; items-a change panna mudiyaathu.
+                    </p>
                 </div>
                 <div class="story-img-wrap">
                     <div
@@ -130,6 +131,30 @@
 <span class="var">x</span>, <span class="var">y</span> <span class="op">=</span> <span class="var">point</span>
 <span class="fn">print</span>(<span class="st">"X coordinate:"</span>, <span class="var">x</span>)
 <span class="fn">print</span>(<span class="st">"Y coordinate:"</span>, <span class="var">y</span>)</pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Tuple Power</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>Tuple vs List Performance</h4>
+                        <p>Tuple "Immutable" nu ninaikathinga, ithu memory-la romba efficient. Fixed size-nu Python-ku
+                            theriyum, so list-a vida fast-a access panna mudiyum.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Nested Mutability</h4>
+                        <p>Tuple-la oru List-a fix pannunga. Ippa tuple-a matha mudiyathu, aana ulla irukura list-a
+                            mathalaam! It's a tricky logic.</p>
+                        <code>T = (1, [2, 3])</code><br>
+                        <code>T[1][0] = 99 # Ithu work aagum!</code>
+                    </div>
+                    <div class="dd-item">
+                        <h4>* Rest Operator</h4>
+                        <p>Unpacking-la extra values-a catch panna <code>*</code> use pannalam.</p>
+                        <code>a, *b = (1, 2, 3, 4)</code><br>
+                        <code># a=1, b=[2, 3, 4]</code>
+                    </div>
                 </div>
             </div>
         </section>

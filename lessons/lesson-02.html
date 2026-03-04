@@ -45,7 +45,9 @@
                     </p>
                 </div>
                 <div class="story-img-wrap">
-                    <img src="../assets/grocery.png" alt="Grocery Billing Visual">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(46, 213, 115, 0.1); font-size:4rem;">
+                        🧾</div>
                 </div>
             </div>
         </section>
@@ -107,6 +109,23 @@
                 </div>
             </section>
 
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Operator Precedence</h3>
+                <p>Multiple operators orey line-la irundha, endha order-la work aagum? Use **PEMDAS**:</p>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>P-E-M-D-A-S</h4>
+                        <p>1. Parentheses <code>()</code> <br> 2. Exponents <code>**</code> <br> 3.
+                            Multiplication/Division <br> 4. Addition/Subtraction</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Complex Example</h4>
+                        <code>result = 10 + 2 * 3 ** 2</code> <br>
+                        <small>Value: 10 + 2 * 9 = 10 + 18 = 28</small>
+                    </div>
+                </div>
+            </div>
+
             <hr class="topic-divider">
             <div class="sub-head"><span class="sn">2</span> Comparison Operators</div>
             <section class="lesson-section">
@@ -162,6 +181,24 @@
                         program decisions edukka romba help-a irukkum.</p>
                 </div>
             </section>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: is vs ==</h3>
+                <p>Inga thaan neraiya per mistake pannuvaanga. Rendum diffent logic!</p>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>== (Equality)</h4>
+                        <p>Rendu variables-la irukkura <b>Value</b> same-ah nu check pannum.</p>
+                        <code>L1 = [1,2]; L2 = [1,2]</code> <br>
+                        <small>L1 == L2 is True</small>
+                    </div>
+                    <div class="dd-item">
+                        <h4>is (Identity)</h4>
+                        <p>Rendu variables-um orey <b>Memory location</b>-la irukkura object-ah nu check pannum.</p>
+                        <small>L1 is L2 is False (different boxes)</small>
+                    </div>
+                </div>
+            </div>
             <section class="lesson-section">
                 <div class="cc-label"><span>💡</span> Quick Concept Check</div>
                 <div class="concept-check">
@@ -224,6 +261,22 @@
                     </div>
                 </div>
             </section>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Short-Circuit Logic</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>AND Short-circuit</h4>
+                        <p><code>A and B</code> evaluation-la, A False aayiruchuna, Python B-ya check pannave pannathu.
+                            Direct-a False-nu mudivu eduthudum.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>OR Short-circuit</h4>
+                        <p><code>A or B</code> evaluation-la, A True aayiruchuna, Python B-ya check pannathu. Direct-a
+                            True-nu solliyidum.</p>
+                    </div>
+                </div>
+            </div>
 
             <hr class="topic-divider">
 
@@ -417,8 +470,8 @@
                 </a></div>
             <footer class="lesson-footer">
                 <p>Python Mastery &mdash; Lesson 02</p>
-            <div class="footer-credit">Designed & Developed by Sanjay</div>
-        </footer>
+                <div class="footer-credit">Designed & Developed by Sanjay</div>
+            </footer>
     </div>
     <script src="../quiz.js"></script>
 </body>

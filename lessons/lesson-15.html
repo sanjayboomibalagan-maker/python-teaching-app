@@ -72,7 +72,8 @@
                 <p>Nee oru elevator-la "Push" button-a amukuna lift varum. Nee oru doorbell-a "Push" pannuna sound
                     varum. Nee oru mobile-a "Push" (Swipe) pannuna unlock aagum. Action ennavo "Push" thaan (Same
                     function name), aana entha object thittu amukkiyo athuku etha maari result varum. Ithu thaan
-                    <b>Polymorphism</b>.</p>
+                    <b>Polymorphism</b>.
+                </p>
             </div>
             <div class="code-wrap">
                 <div class="code-head"><span class="lang">Python</span>
@@ -87,6 +88,28 @@
 
 <span class="kw">for</span> <span class="var">animal</span> <span class="kw">in</span> [<span class="fn">Dog</span>(), <span class="fn">Cat</span>()]:
     <span class="var">animal</span>.<span class="fn">sound</span>()</pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Advanced OOP Patterns</h3>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>MRO (Method Resolution Order)</h4>
+                        <p>Multiple inheritance-la orey function name rendu parent kitta iruntha, endha parent first
+                            varuvaanga nu <code>Class.mro()</code> vachi paarkkalaam.</p>
+                    </div>
+                    <div class="dd-item">
+                        <h4>Operator Overloading</h4>
+                        <p>Rendu objects-a <code>+</code> panna enna nadakanum nu nee ezhuthalaam! Example:
+                            <code>__add__</code> method.</p>
+                        <code>def __add__(self, other): return self.x + other.x</code>
+                    </div>
+                    <div class="dd-item">
+                        <h4>isinstance()</h4>
+                        <p>Oru object endha class-a serndhathu nu check panna <code>isinstance(obj, Class)</code> use
+                            pannuvom.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -147,7 +170,8 @@
                     <div class="quiz-opt" data-value="overriding">Method Overriding</div>
                 </div>
                 <div class="quiz-explanation"><b>Explanation:</b> Already irukura parent logic-a overwrite pannurathuku
-                    <b>Method Overriding</b> nu peyar.</div>
+                    <b>Method Overriding</b> nu peyar.
+                </div>
             </div>
 
             <button class="quiz-submit-btn">Check My Score</button>

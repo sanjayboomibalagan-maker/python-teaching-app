@@ -47,7 +47,9 @@
                         store panni, manipulate pannalam.</p>
                 </div>
                 <div class="story-img-wrap">
-                    <img src="../assets/nameboard.png" alt="Shop Name Board Visual">
+                    <div
+                        style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(55, 66, 250, 0.1); font-size:4rem;">
+                        🔤</div>
                 </div>
             </div>
         </section>
@@ -112,6 +114,25 @@
 <span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>])      <span class="cm"># C (first character)</span>
 <span class="fn">print</span>(<span class="var">name</span>[-<span class="num">1</span>])     <span class="cm"># i (last character)</span>
 <span class="fn">print</span>(<span class="var">name</span>[<span class="num">0</span>:<span class="num">3</span>])   <span class="cm"># Che (slicing)</span></pre>
+                </div>
+            </div>
+
+            <div class="mastery-deep-dive">
+                <h3>🚀 Mastery Deep Dive: Advanced Slicing</h3>
+                <p>Slicing-la 3 params irukku: <code>[start : stop : step]</code>.</p>
+                <div class="deep-dive-grid">
+                    <div class="dd-item">
+                        <h4>The 'Step' parameter</h4>
+                        <p>Oru letter vittu oru letter edukka <code>step=2</code> use pannalaam.</p>
+                        <code>"Python"[::2]</code> <br>
+                        <small>Output: Pto</small>
+                    </div>
+                    <div class="dd-item">
+                        <h4>String Reversal</h4>
+                        <p>Reversing logic in one line!</p>
+                        <code>"Chennai"[::-1]</code> <br>
+                        <small>Output: iannehC</small>
+                    </div>
                 </div>
             </div>
         </section>
@@ -205,6 +226,23 @@ Name uppercase: SANJAY</pre>
                 </div>
             </div>
         </section>
+
+        <div class="mastery-deep-dive">
+            <h3>🚀 Mastery Deep Dive: f-string formatting</h3>
+            <div class="deep-dive-grid">
+                <div class="dd-item">
+                    <h4>Precision Control</h4>
+                    <p>Decimal points control panna: <code>{val:.2f}</code> use pannuvaanga.</p>
+                    <code>pi = 3.14159; f"{pi:.2f}"</code> <br>
+                    <small>Output: 3.14</small>
+                </div>
+                <div class="dd-item">
+                    <h4>Expressions inside</h4>
+                    <p>Curly brackets ulla calculation/methods-um use pannalaam.</p>
+                    <code>f"{name.upper()} counts {len(name)}"</code>
+                </div>
+            </div>
+        </div>
 
         <hr class="topic-divider">
         <section class="lesson-section">
